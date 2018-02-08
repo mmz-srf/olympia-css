@@ -589,6 +589,9 @@ table tbody tr th { /* "untertitel" */
         padding: 10px 8px;
         min-width: 170px;
     }
+    .widget-resultsoverview .tablecell.event .anchor {
+        padding: 10px 0;
+    }
     .tablecell.event .anchor span {
         color: #e31f2b;
         text-decoration: underline;
@@ -611,6 +614,7 @@ table tbody tr th { /* "untertitel" */
         background-color: #ebebe5;
         display: block;
         color: #e31f2b;
+        text-decoration: underline;
     }
     .tablecell.event .anchor:hover span {
         background-color: #dadad2;
