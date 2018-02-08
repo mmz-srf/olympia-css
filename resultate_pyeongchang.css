@@ -2747,6 +2747,16 @@ button.toggle-button::before,
     color: #555;
 }
 
+@media screen and (max-width:639px) {
+    .resultsDetailIntermediatePhases {
+        margin-bottom: 8px;
+        white-space: inherit;
+    }
+    .resultsDetailIntermediatePhases .loop-block {
+        margin-bottom: 8px;
+    }
+}
+
 /* progress bar */
 .widget-results-detail div.resultDetailProgressBar .progressBar {
     width: 300px;
