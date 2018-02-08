@@ -2717,6 +2717,24 @@ button.toggle-button::before,
     color: #555;
 }
 
+.resultsDetailIntermediatePhases .loop-block { /* ul */
+    margin-right: 16px;
+}
+.resultsDetailIntermediatePhases .loop-block .intermediate { /* link container */
+    width: 33.33%;
+    margin: 0;
+}
+.resultsDetailIntermediatePhases ul li span.selected {
+    padding-bottom: 0;
+    border-bottom: none;
+    color: #222;
+}
+
+.resultsDetailIntermediatePhases h5 .format-local {
+    font: 15px/27px SRG_SSR_Medium;
+    color: #555;
+}
+
 /* progress bar */
 .widget-results-detail div.resultDetailProgressBar .progressBar {
     width: 300px;
