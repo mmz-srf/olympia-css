@@ -2705,6 +2705,7 @@ button.toggle-button::before,
 }
 .resultsDetailIntermediatePhases {
     padding-left: 0;
+    margin-bottom: 12px; /* let's hope this doesn't "explode" anywhere */
 }
 .resultsDetailIntermediatePhases ul:not(.loop-block),
 .resultsDetailIntermediatePhases .intermediate-container {
@@ -2720,9 +2721,18 @@ button.toggle-button::before,
 .resultsDetailIntermediatePhases .loop-block { /* ul */
     margin-right: 16px;
 }
+.resultsDetailIntermediatePhases .loop-block li { /* ul li */
+   padding-bottom: 0;
+}
 .resultsDetailIntermediatePhases .loop-block .intermediate { /* link container */
     width: 33.33%;
     margin: 0;
+}
+.resultsDetailIntermediatePhases .loop-block .intermediate span { /* link text container */
+    color: #e31f2b; /* hover: #c91024 */
+}
+.resultsDetailIntermediatePhases .loop-block .intermediate:hover span {
+    color: #c91024; /* hover: #c91024 */
 }
 .resultsDetailIntermediatePhases ul li span.selected {
     padding-bottom: 0;
