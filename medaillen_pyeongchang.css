@@ -1,0 +1,552 @@
+/*FONTS*/
+@font-face {
+    font-family: 'SRG_SSR_Regular';
+    src: url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_rg.eot');
+    src: url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_rg.eot?#iefix') format('embedded-opentype'), url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_rg.woff') format('woff'), url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_rg.ttf') format('truetype'), url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_rg.svg#SRGSSRTypeRegular') format('svg');
+    font-weight: normal !important;
+    font-style: normal !important;
+    letter-spacing: .5px !important
+}
+@font-face {
+    font-family: 'SRG_SSR_Bold';
+    src: url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_bd.eot');
+    src: url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_bd.eot?#iefix') format('embedded-opentype'), url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_bd.woff') format('woff'), url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_bd.ttf') format('truetype'), url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_bd.svg#SRGSSRTypeBold') format('svg');
+    font-weight: bold !important;
+    font-style: normal !important;
+    letter-spacing: .5px !important
+}
+@font-face {
+    font-family: 'SRG_SSR_Medium';
+    src: url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_md.eot');
+    src: url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_md.eot?#iefix') format('embedded-opentype'), url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_md.woff') format('woff'), url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_md.ttf') format('truetype'), url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_md.svg#SRG_SSR_Medium') format('svg');
+    font-weight: normal !important;
+    font-style: normal !important;
+    letter-spacing: .5px !important;
+}
+
+@font-face {
+    font-family: 'SRG_SSR_Light';
+    src: url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_lt.eot');
+    src: url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_lt.eot?#iefix') format('embedded-opentype'), url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_lt.woff') format('woff'), url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_lt.ttf') format('truetype'), url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_lt.svg#SRG_SSR_Light') format('svg');
+    font-weight: normal !important;
+    font-style: normal !important;
+    letter-spacing: .5px !important;
+}
+
+/* colors: */
+/* bg grau: #e3e3e7 => font: #8c8e96
+bg hellblau: #38a5ce => font: weiss
+bg "dunkelblau": #10789f => font: weiss
+
+/* colors: */
+/* hellgrau: #ebebe5 |
+/* hellgrau verlinkt: #eaeae4 | hover: #e2e0d7 (titel ? #e2e0d7)
+    verlinkt: #ebebe5; (color: #555) | hover: #e2e0d7; | color
+    unverlinkt: #f5f5f2 | dunkler: #ebebe5 | color: #646464
+ */
+
+/* ===
+dunkelbeige: #e2e0d7
+hell: #ebebe5
+heller: #f5f5f2
+*/
+/* border beneath link: solid 1px #D3D3CD */
+
+/*TYPO*/
+
+.panel-primary > .panel-heading {
+    background-color: #fff;
+    border: 0;
+    padding: 0;
+}
+
+.panel-heading h1 {
+    font-family: "SRG_SSR_Medium", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    text-align: left !important;
+    margin: 12px 0 !important;
+}
+
+.panel-primary > .panel-heading h1 {
+    display: none;
+}
+
+.panel-heading h1 .format-local {
+    color: #222;
+}
+
+.panel { /* .panel.panel-primary.widget-medaltable-season */
+    background-color: transparent;
+}
+
+
+.panel-heading.dropdown-filter {
+    margin: 16px 0 16px;
+    margin: 0 0 16px;
+}
+
+@media screen and (max-width:639px) {
+    .widget-medaltable-season {
+        margin-bottom: 24px;
+    }
+    .panel-primary .panel-body {
+        padding: 0;
+    }
+}
+
+.panel-heading .dropdown .dropdown-toggle { /* a */
+    margin: 0 0 8px 0; /* 8px 0 */
+    padding: 3px 16px; /* padding: 12px 0; */
+    min-width: 200px;
+    display: block;
+    position: relative;
+
+    background: linear-gradient(#ebebe5, #d8d6ca);
+    border-radius: 2px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d3d3ce #c3c1b6 #c3c1b6;
+}
+
+.panel-heading .dropdown .dropdown-toggle, /* dropdown a */
+.panel-heading .dropdown .dropdown-menu { /* dropdown ul */
+    width: 350px;
+}
+
+@media screen and (max-width:640px) {
+    .panel-heading .dropdown .dropdown-toggle, /* dropdown a */
+    .panel-heading .dropdown .dropdown-menu { /* dropdown ul */
+        width: 100%;
+    }
+}
+
+.panel-heading .dropdown .dropdown-toggle span {
+    font: 15px/24px "SRG_SSR_Medium", sans-serif;
+    color: #555;
+}
+
+.panel-heading .dropdown .dropdown-toggle:hover span {
+    color: #222;
+}
+
+.panel-heading .dropdown .dropdown-toggle:hover { /* select active */
+    background-color: #dadad2;
+    background-image: none;
+}
+
+.panel-heading .dropdown.open .dropdown-toggle,
+.panel-heading .dropdown.open .dropdown-toggle:hover {
+    border-bottom: 1px solid #969696;
+    background-color: #ebebe5;
+    background-image: none;
+}
+
+.panel-heading .dropdown .dropdown-menu {
+    background-color: #f5f5f2; /* #ebebe5; */
+    margin-top: 0;
+    padding: 1px 0;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.4);
+}
+
+.panel-heading .dropdown .dropdown-menu .anchor {
+    font: 15px/21px "SRG_SSR_Medium", sans-serif;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    color: #555;
+    padding: 6px 16px;
+    width: 100%;
+}
+
+.panel-heading .dropdown .dropdown-menu .anchor:hover {
+    background-color: #ebebe5; /* #dadad2; */
+}
+
+.panel-heading .dropdown .dropdown-menu .list-item:last-child .anchor {
+    border-bottom: 0;
+}
+
+
+
+
+
+
+.panel-heading .dropdown .glyphicon-chevron-down::before {
+    content: none;
+}
+
+.panel-heading .dropdown .glyphicon-chevron-down {
+    background: url(img/small_triangle.svg);
+    top: 0;
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    right: 16px;
+    top: 50% !important;
+    transform: translate(0, -50%);
+    opacity: .7;
+}
+
+.panel-heading .dropdown .dropdown-toggle:hover .glyphicon-chevron-down {
+    opacity: 1;
+}
+
+table thead tr th { /* titelzeile */
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana;
+    color: #222;
+    font-size: 13px;
+    background-color: #e2e0d7;
+    height: 30px;
+    padding: 0 8px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+}
+
+table tbody tr th { /* "untertitel" */
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana;
+    color: #222;
+    font-size: 13px;
+    text-transform: capitalize;
+    background-color: #fff;
+    padding: 0 8px;
+    display: table-cell;
+    text-align: left;
+    height: 40px;
+    vertical-align: bottom;
+    padding-bottom: 6px;
+}
+
+.table tbody tr th.sortable span, /* overwrite */
+.table thead tr th.sortable span,
+.table thead tr th span,
+.table tbody tr th span {
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana;
+    color: #222;
+    font-size: 13px;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+.table tbody tr th,
+.table thead tr th,
+.table tbody tr td,
+.table thead tr td {
+    border-bottom: 0;
+}
+
+/* initial view */
+.table thead tr td.tablecell.no-data {
+    background: #f2f2f5;
+    padding: 0 16px;
+}
+.table thead tr td.tablecell.no-data .format-local {
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana;
+    color: #555;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.table tbody tr td.medal:not(.medal-header), .table tbody tr th.medal,
+    /* .table tbody tr td.medal, .table tbody tr th.medal, */
+.table thead tr td.medal, .table thead tr th.medal {
+    /* min-width: 54px; */
+    width: auto;
+}
+.medal-table-expanded-view .expansion-data .sport-wrapper:last-of-type {
+    margin-bottom: 16px;
+}
+.medal-table-expanded-view .expansion-data .sport-wrapper .medallists .medal-header::before,
+.table tbody tr th.medal::before,
+.table thead tr th.medal::before {
+    width: 12px;
+    height: 12px;
+    margin-bottom: -1px
+}
+.table tbody tr th.medal::before,
+.table thead tr th.medal::before {
+    top: 0;
+}
+.medal-table-expanded-view .expansion-data .sport-wrapper .medallists .medal-header::before {
+    top: 0;
+}
+.table tbody tr td:last-child, .table tbody tr th:last-child,
+.table thead tr td:last-child, .table thead tr th:last-child {
+    width: 15px; /* here below ist the arrow :/ */
+}
+
+.table tbody td span {
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana;
+    color: #555;
+    font-size: 13px;
+    font-weight: 400 !important;
+}
+
+@media screen and (min-width:640px) {
+    .table tbody td span {
+        font-size: 15px;
+    }
+
+    .table tbody tr.expand-area td .medal-table-expanded-view > div > .format-local {
+        font-size: 13px; /* no data :/ */
+    }
+}
+
+.table tbody tr.tablerow td { /* content */
+    height: 40px;
+    padding: 0 10px;
+    background-color: #f5f5f2;
+    border-top: 2px solid #fff;
+}
+
+.table tbody tr.highlight td {
+    background-color: #ebebe5;
+}
+.table tbody tr.highlight:hover td {
+    background-color: #e2e0d7;
+}
+
+.table tbody tr.tablerow.expand-area td {
+    /* hide border desktop also */
+}
+
+.table tbody tr.tablerow td.ExpandButton {
+    /* padding-left: 0; */
+}
+
+.table tbody tr.tablerow td.medal-total {
+    padding: 0;
+}
+
+.table tbody tr.tablerow:not(.expand-area):hover td { /* content */
+    /* .expanded-country:hover + .expanded-country td { */
+    background-color: #ebebe5;
+}
+
+/* overwrites */
+.table thead tr th.participant {
+    padding-left: 10px;
+}
+
+.table tbody tr td.participant,
+.table tbody tr td.rank {
+    border-bottom: 0;
+}
+
+.table tbody tr td.medal.medal-header {
+    padding: 0 0 7px 10px;
+}
+
+.table tbody tr td.medal-header .format-local::before {
+    top: 13px;
+}
+
+.table tbody tr th.medal::before,
+.table thead tr th.medal::before,
+.table tbody tr td.medal .format-local::before,
+.table thead tr td.medal .format-local::before,
+.medal-table-expanded-view .expansion-data .sport-wrapper .medallists .medal-header::before {
+    border: 1px solid #fff;
+}
+
+@media screen and (max-width:639px) {
+    .table tbody tr td.medal-header .format-local::before,
+    .table thead tr td.medal-header .format-local::before {
+        width: 12px;
+        height: 12px;
+    }
+    /* .table tbody tr.tablerow:nth-of-type(2n) td { */
+    .table tbody tr.tablerow:not(.country-row) td {
+        /* border-top: 0;/* border-top mobile */
+    }
+    .table tbody tr.tablerow:not(.country-row):not(.expand-area) td {
+        border-top: 0; /* border-top mobile */
+    }
+}
+
+.tablecell.sortable .format-local,
+.sortable .icon-chevron-down::before {
+    color: #555;
+}
+
+.tablecell.sortable:hover .format-local,
+.sortable:hover .icon-chevron-down::before,
+.sortable .sorted .icon-chevron-down::before {
+    color: #222;
+}
+
+.tablecell.sortable .sorted .format-local,
+.sortable .sorted span {
+    color: #222;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.sortable span.icon-chevron-down {
+    font-size: 12px !important;
+    line-height: 13px;
+}
+
+.sortable .icon-chevron-down::before {
+    padding-left: 2px;
+}
+
+/* /// alternativ:
+.sortable span.icon-chevron-down {
+    font-size: 13px;
+    line-height: 13px;
+    background: url(img/arrow_right.svg) no-repeat;
+    width: 12px;
+    height: 13px;
+    display: inline-block;
+    transform: rotate(90deg);
+    background-size: 13px;
+    margin-left: 5px;
+    background-position: 4px;
+}
+*/
+
+
+/* button */
+button.toggle-button::before { }
+
+.show-more-or-less-buttons {
+    margin: 16px auto;
+    margin: 0 auto;
+}
+
+.show-more-or-less-buttons .btn {
+    border: 1px solid #e3e3e7;
+    background-image: linear-gradient(to bottom, #f5f5f2 0%, #e2e0d7 100%);
+    border-radius: 2px;
+    font-family: "SRG_SSR_Medium", sans-serif;
+    margin: 16px 0;
+    padding: 6px 16px;
+    border-color: #d3d3ce #c3c1b6 #c3c1b6;
+    width: 190px;
+}
+
+.btn:active, .btn:focus, .btn:hover,
+.show-more-or-less-buttons .btn:active,
+.show-more-or-less-buttons .btn:focus,
+.show-more-or-less-buttons .btn:hover {
+    background-color: #dadad2; /* #f5f5f2; <-- huebscher!! */
+    background-image: none;
+}
+
+.show-more-or-less-buttons .format-local {
+    font: 15px/21px "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif !important;
+    font-weight: 400 !important;
+    color: #555;
+}
+
+.show-more-or-less-buttons .btn:hover .format-local {
+    color: #222;
+}
+
+button.toggle-button,
+.show-more-or-less-buttons .icon-chevron-up,
+.show-more-or-less-buttons .icon-chevron-down {
+    background: url(img/arrow_right.svg) no-repeat;
+    background-size: 20px;
+    width: 12px;
+    height: 20px;
+    display: inline-block;
+    opacity: .7;
+}
+button.toggle-button-unchecked,
+.show-more-or-less-buttons .icon-chevron-down {
+    /* background-position: 2px; */
+    transform: rotate(90deg);
+}
+
+button.toggle-button.toggle-button-checked,
+.show-more-or-less-buttons .icon-chevron-up {
+    /* background-position: 0; */
+    transform: rotate(270deg);
+}
+
+button.toggle-button:hover,
+.show-more-or-less-buttons .btn:hover .icon-chevron-down,
+.show-more-or-less-buttons .btn:hover .icon-chevron-up {
+    opacity: 1;
+}
+
+button.toggle-button::before,
+.show-more-or-less-buttons .icon-chevron-down::before,
+.show-more-or-less-buttons .icon-chevron-up::before {
+    content: "";
+    border: 0 !important;
+}
+
+/* overwrite :/ */
+button.toggle-button,
+button.toggle-button:active,
+button.toggle-button:focus,
+button.toggle-button:hover {
+    background: url(img/arrow_right.svg) no-repeat;
+    background-size: 20px;
+    background-position: -5px -10px;
+    border: 20px solid transparent;
+    /* background-position: 2px; */
+}
+
+/* expanded view: */
+
+.medal-table-expanded-view .expansion-data .sport-wrapper .medallist-sport-name {
+    font: 15px/21px "SRG_SSR_Bold", Arial, Helvetica, Verdana, sans-serif;
+    color: #555;
+    font-weight: 400;
+    margin: 16px 0 8px;
+}
+
+.medal-table-expanded-view .expansion-data .sport-wrapper,
+.medal-table-expanded-view .expansion-data .sport-wrapper .medallists,
+.medal-table-expanded-view .expansion-data .sport-wrapper .medallists .medallist {
+    margin-bottom: 4px;
+}
+
+.medal-table-expanded-view .expansion-data .sport-wrapper,
+.medal-table-expanded-view .expansion-data .sport-wrapper .medallists {
+    margin-bottom: 0;
+}
+@media screen and (max-width:639px) {
+    .medal-table-expanded-view .expansion-data .sport-wrapper .medallists {
+        margin-bottom: 8px;
+    }
+    .medal-table-expanded-view .expansion-data .sport-wrapper:not(:first-of-type) .medallist-sport-name {
+        margin-top: 8px;
+    }
+}
+
+.medal-table-expanded-view .expansion-data .sport-wrapper .medallists .medallist {
+    margin-bottom: 0;
+}
+.medal-table-expanded-view .expansion-data .sport-wrapper .medallists .medal-header {
+    margin-bottom: 8px;
+}
+.medal-table-expanded-view .expansion-data .sport-wrapper .medallists .medal-header .format-local {
+    color: #222;
+    font-size: 15px;
+}
+
+.medal-table-expanded-view .expansion-data .sport-wrapper .medallists .participant {
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif;
+    color: #555;
+}
+.medal-table-expanded-view .expansion-data .sport-wrapper .medallists .gender-event {
+    font-family: "SRG_SSR_Light", Arial, Helvetica, Verdana, sans-serif;
+    color: #555 !important;
+}
+
+@media screen and (min-width:640px) {
+    .medal-table-expanded-view .expansion-data .sport-wrapper .medallists .participant,
+    .medal-table-expanded-view .expansion-data .sport-wrapper .medallists .gender-event {
+        font-size: 15px !important;
+        margin-left: 18px;
+    }
+}
+
+.panel {
+    box-shadow: none;
+}

@@ -1,0 +1,2899 @@
+/*FONTS*/
+@font-face {
+    font-family: 'SRG_SSR_Regular';
+    src: url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_rg.eot');
+    src: url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_rg.eot?#iefix') format('embedded-opentype'), url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_rg.woff') format('woff'), url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_rg.ttf') format('truetype'), url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_rg.svg#SRGSSRTypeRegular') format('svg');
+    font-weight: normal !important;
+    font-style: normal !important;
+    letter-spacing: .5px !important
+}
+@font-face {
+    font-family: 'SRG_SSR_Bold';
+    src: url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_bd.eot');
+    src: url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_bd.eot?#iefix') format('embedded-opentype'), url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_bd.woff') format('woff'), url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_bd.ttf') format('truetype'), url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_bd.svg#SRGSSRTypeBold') format('svg');
+    font-weight: bold !important;
+    font-style: normal !important;
+    letter-spacing: .5px !important
+}
+@font-face {
+    font-family: 'SRG_SSR_Medium';
+    src: url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_md.eot');
+    src: url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_md.eot?#iefix') format('embedded-opentype'), url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_md.woff') format('woff'), url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_md.ttf') format('truetype'), url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_md.svg#SRG_SSR_Medium') format('svg');
+    font-weight: normal !important;
+    font-style: normal !important;
+    letter-spacing: .5px !important;
+}
+
+@font-face {
+    font-family: 'SRG_SSR_Light';
+    src: url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_lt.eot');
+    src: url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_lt.eot?#iefix') format('embedded-opentype'), url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_lt.woff') format('woff'), url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_lt.ttf') format('truetype'), url('https://www.srf.ch/static/srf-editorial-frontend/_assets/fonts/srgssrtype_lt.svg#SRG_SSR_Light') format('svg');
+    font-weight: normal !important;
+    font-style: normal !important;
+    letter-spacing: .5px !important;
+}
+
+/* colors: */
+/* bg grau: #e3e3e7 => font: #8c8e96
+bg hellblau: #38a5ce => font: weiss
+bg "dunkelblau": #10789f => font: weiss
+
+/* colors: */
+/* hellgrau: #ebebe5 |
+/* hellgrau verlinkt: #eaeae4 | hover: #e2e0d7 (titel ? #e2e0d7) | border: solid 1px #D3D3CD; #d3d3cd; => 1px solid rgba(0,0,0,.15);
+    verlinkt: #ebebe5; (color: #555) | hover: #e2e0d7; | color
+    unverlinkt: #f5f5f2 | dunkler: #ebebe5 | color: #646464
+ */
+
+/* ===
+dunkelbeige: #e2e0d7
+hell: #ebebe5
+heller: #f5f5f2
+*/
+/* border beneath link: solid 1px #D3D3CD */
+
+/*TYPO*/
+* {
+    font-family: "SRG_SSR_Regular", Arial, Helvetica, Verdana, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #555;
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif;
+}
+.panel.widget-resultsoverview .panel-heading,
+.panel-primary > .panel-heading {
+    background-color: #fff;
+    border: 0;
+    padding: 0;
+}
+
+.panel.widget-resultsoverview .panel-heading h1,
+.panel-heading h1 {
+    font-family: "SRG_SSR_Medium", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    text-align: left !important;
+    margin: 12px 0 !important;
+    line-height: 1.5em;
+
+    display: none;
+}
+
+.panel-heading h1 .format-local {
+    color: #222;
+}
+
+@media screen and (max-width:640px) {
+    .panel-primary .panel-body {
+        padding: 0;
+    }
+}
+
+/* detail page title ----> */
+.widget-standing .panel-heading .sport, /* curling detail */
+.widget-results-detail .panel-heading .sport, /* lists ... */
+.widget-match-detail .panel-heading .sport { /* curling | hockey */
+    font: 28px/36px "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif;
+    font-weight: 400;
+    color: #222;
+}
+.widget-standing .panel-heading .genderevent, /* curling detail */
+.widget-results-detail .panel-heading .genderevent,
+.widget-match-detail .panel-heading .genderevent {
+    font-family: "SRG_SSR_Light", Arial, Helvetica, Verdana, sans-serif;
+    color: #222;
+    font-size: 21px;
+}
+@media screen and (max-width:639px) {
+    .panel-primary > .panel-heading {
+        height: auto;
+    }
+    .widget-standing .panel-heading .sport, /* curling detail */
+    .widget-standing .panel-heading.dropdown-navigation .sport,
+    .widget-results-detail .panel-heading.dropdown-navigation .sport,
+    .widget-results-detail .panel-heading .sport,
+    .widget-match-detail .panel-heading .sport {
+        font-size: 21px;
+        line-height: 31px;
+        display: inline-block;
+        margin: 0; /* 8px 8px 12px 0 */
+        margin-right: 8px;
+    }
+    .widget-results-detail .panel-heading.dropdown-navigation .genderevent,
+    .widget-standing .panel-heading.dropdown-navigation .genderevent, /* overwrite */
+    .widget-standing .panel-heading .genderevent, /* curling detail */
+    .widget-results-detail .panel-heading .genderevent,
+    .widget-match-detail .panel-heading .genderevent {
+        font-size: 18px;
+        display: inline-block;
+    }
+    .widget-results-detail .sportgenderevent,
+    .widget-standing .sportgenderevent {/* curling */
+        top: 6px;
+        margin-bottom: 10px;
+        margin: 40px 0 16px; /* 32px 0 0; */
+    }
+
+    .panel .mobile-heading .dark-subheader {
+        background-color: transparent;
+    }
+}
+
+@media screen and (min-width:640px) {
+    /* move menu down, so there's no overlapping */
+    .panel-primary > .panel-heading .phaselist.medium.drop {
+        margin-top: 71px; /* 30px; */
+        width: 100%;
+    }
+    /* .widget-standing .sportgenderevent { /* curling */ /* margin: 2px 0 16px; } */
+    .widget-standing .sportgenderevent, /* curling */
+    .widget-results-detail .sportgenderevent { /* eishockey | eiskunst ... */
+        margin: 4px auto 0;
+        position: absolute;
+        /* left: 50%;
+        transform: translate(-50%, 0); */
+        left: 0;
+        top: 39px;
+    }
+    .phase-navigation.tab {
+        margin: 16px 0;
+        float: left;
+        width: 100%;
+    }
+}
+/* end detail page title  */
+
+/* titles curling */
+.widget-standing .panel-group .panel-heading button.non-clickable {
+    color: #555;
+    font: 20px/36px "SRG_SSR_Regular", Arial, Helvetica, Verdana, sans-serif;
+    text-align: left;
+    padding: 0;
+    margin: 16px 0 8px 0; /* ://// */
+    border-bottom: 1px solid #969696;
+}
+.widget-standing .panel-group .panel-schedule:first-child button.non-clickable {
+    margin-top: 8px;
+}
+.widget-standing .panel-group .panel .panel-heading.day-header {
+    margin-bottom: 8px; /* from above! */
+    height: 40px;
+    padding: 0;
+}
+.widget-standing .panel-group .panel .panel-heading .day-title span {
+    color: #555;
+    font: 20px/36px "SRG_SSR_Regular", Arial, Helvetica, Verdana, sans-serif;
+}
+
+/* */
+.widget-standing .live-indicator {
+    text-transform: uppercase;
+    background-color: #e31f2b; /* hover: #c91024 */
+    line-height: 16px;
+    margin-top: 0;
+}
+.widget-standing .live-indicator .format-local {
+    color: #fff;
+    font-weight: 700;
+}
+
+/*titel*/
+.panel.panel-primary.widget-resultsoverview .panel-body .gender {
+    color: #555;
+    font: 20px/36px "SRG_SSR_Regular", Arial, Helvetica, Verdana, sans-serif;
+    text-align: left;
+    padding: 0;
+    margin: 16px 0 8px 0; /* ://// */
+    border-bottom: 1px solid #969696;
+}
+.widget-standing .panel-group .panel-heading button.non-clickable .day-title.no-icon {
+    color: #555;
+    font: 20px/36px "SRG_SSR_Regular", Arial, Helvetica, Verdana, sans-serif;
+}
+
+.panel.widget-resultsoverview .panel-heading.dropdown-filter,
+.panel-heading.dropdown-filter { /* container */
+    margin: 16px 0 16px;
+    margin: 0;
+    padding: 0;
+    background-color: transparent !important;
+}
+
+@media screen and (min-width:640px) {
+    .panel-heading .dropdown {
+        /* width: 240px; /* resultcenter */
+    }
+
+    .panel-heading .dropdown .dropdown-toggle, /* dropdown a */
+    .panel-heading .dropdown .dropdown-menu { /* dropdown ul */
+        width: 240px;
+    }
+}
+
+.panel-heading .dropdown .dropdown-toggle { /* a */
+    margin: 0; /* 0 0 8px 0; */
+    padding: 6px 16px; /* padding: 12px 0; */
+    min-width: 200px;
+    display: block;
+    position: relative;
+
+    background: linear-gradient(#ebebe5, #d8d6ca);
+    border-radius: 2px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d3d3ce #c3c1b6 #c3c1b6;
+}
+
+@media screen and (max-width:639px) {
+    .panel-heading .dropdown, /* dropdown a */
+    .panel-heading .dropdown .dropdown-toggle, /* dropdown a */
+    .panel-heading .dropdown .dropdown-menu { /* dropdown ul */
+        width: 100%;
+    }
+    .panel .mobile-heading .phase-navigation.dropdown { /* overwrite */
+        margin: 8px 0 24px;
+        margin: 0 0 16px;
+    }
+    .panel .panel-heading.dropdown-filter .dropdown {
+        padding-right: 0;
+    }
+    .panel-heading .dropdown .dropdown-toggle {
+        height: 48px;
+        padding: 12px 16px;
+    }
+}
+
+.panel.widget-resultsoverview .panel-heading.dropdown-filter .dropdown .dropdown-toggle span,
+.panel-heading .dropdown .dropdown-toggle span {
+    font: 15px/24px "SRG_SSR_Medium", sans-serif;
+    color: #555;
+}
+
+.panel.widget-resultsoverview .panel-heading.dropdown-filter .dropdown .dropdown-toggle:hover span,
+.panel.widget-resultsoverview .panel-heading.dropdown-filter .dropdown.open .dropdown-toggle span,
+.panel-heading .dropdown .dropdown-toggle:hover span,
+.panel-heading .dropdown.open .dropdown-toggle span {
+    color: #222;
+    opacity: 1;
+}
+
+.panel-heading .dropdown .dropdown-toggle:hover { /* select active */
+    /* background-color: #dadad2;
+    background-image: none; */
+}
+
+.panel-heading .dropdown.open .dropdown-toggle,
+.panel-heading .dropdown.open .dropdown-toggle:hover {
+    border-bottom: 1px solid #969696;
+    background-color: #ebebe5;
+    background-image: none;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.4);
+}
+
+.subphaseList .dropdown-toggle {} /*.glyphicon-chevron-down*/
+
+.panel-heading .dropdown .dropdown-menu {
+    background-color: #f5f5f2; /* #ebebe5; */
+    margin-top: 0;
+    padding: 0; /* 1px 0; */
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.4);
+    margin-top: -1px;
+}
+
+.panel-heading .subphaseList.dropdown .dropdown-menu {
+    margin-top: 6px;
+}
+
+.panel-heading .dropdown .dropdown-menu .anchor {
+    font: 15px/21px "SRG_SSR_Medium", sans-serif;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    color: #555;
+    padding: 13px 16px;
+    width: 100%;
+}
+
+.panel-heading .dropdown .dropdown-menu .anchor:hover {
+    background-color: #ebebe5; /* #dadad2; */
+}
+
+.panel-heading .dropdown .dropdown-menu .list-item:last-child .anchor {
+    border-bottom: 0;
+}
+
+/* loading ... */
+.widget-results-detail .schedule-options + div > .format-local,
+.widtget-results-detail > div:not(.panel-heading):not(.responsive-component) > .format-local {
+    /* background: green; */
+}
+.widget-resultsoverview > div:not(.panel-heading):not(.dropdown-filter) > .format-local {
+    font-family: "SRG_SSR_Regular", Arial, Helvetica, Verdana;
+    font-size: 15px;
+    color: #222;
+}
+
+.phase-navigation .phaselist .glyphicon-chevron-down::before,
+.panel-heading .dropdown .glyphicon-chevron-down::before,
+.panel-heading .dropdown .glyphicon-triangle-bottom::before {
+    content: none;
+}
+
+.phase-navigation .phaselist .glyphicon-chevron-down,
+.panel-heading .dropdown .glyphicon-chevron-down,
+.panel-heading .dropdown .glyphicon-triangle-bottom {
+    background: url(img/small_triangle.svg);
+    top: 0;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    right: 16px;
+    top: 50% !important;
+    transform: translate(0, -50%) !important;
+    opacity: .7;
+}
+
+.phase-navigation .phaselist .dropdown-toggle:hover .glyphicon-chevron-down,
+.panel-heading .dropdown .dropdown-toggle:hover .glyphicon-chevron-down,
+.panel-heading .dropdown.open .dropdown-toggle:hover .glyphicon-chevron-down,
+.panel-heading .dropdown .dropdown-toggle:hover .glyphicon-triangle-bottom,
+.panel-heading .dropdown.open .dropdown-toggle:hover .glyphicon-triangle-bottom {
+    opacity: 1;
+}
+
+.table {
+    border-collapse: separate; /* important for the lines!! */
+}
+
+table tbody tr th { /* "untertitel" */
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana;
+    color: #222;
+    font-size: 13px;
+    display: table-cell;
+    text-align: left;
+}
+
+.panel-body.FSKDetailsTables .table tr.tablerow th,
+.panel-body.widget-result-detail-mainstandings-view .table tr.tablerow td .main-standings-expanded-area-table .table thead tr th
+.main-list-expanded-area-table .table tr th,
+.expandArea table thead tr th, /* titelzeile */
+table thead tr th { /* titelzeile */
+    background-color: #e2e0d7 !important;
+    height: 30px;
+    padding: 4px 8px !important;
+    line-height: 15px;
+    vertical-align: middle;
+    border-bottom: 0 !important;
+}
+
+.main-list-expanded-area-table .table tr td.time {
+    padding-top: 0;
+}
+
+table tbody tr th { /* "untertitel" */
+    text-transform: capitalize;
+    background-color: #fff;
+    padding: 0 8px 6px;
+    height: 40px;
+    vertical-align: bottom;
+}
+
+.table tbody tr th {
+    border-bottom: 0;
+}
+
+.table thead tr th span,
+.table tbody tr th span {
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana !important;
+    font-size: 13px !important;
+    text-transform: capitalize;
+}
+
+.table thead tr th span, /* titelzeile */
+.table thead + thead tr th span { /* err :/ */
+    font-weight: 400;
+    color: #222;
+}
+.table tbody tr th span { /* untertitel */
+    font-weight: 400;
+    color: #555;
+}
+.panel-primary .table tbody tr th span { /* hopefully entrypage */
+    /* font-weight: 700; */
+}
+
+/* .table tbody td span, */
+.widget-standing .table tbody tr.tablerow td.date-time-broadcast.date span,
+.widget-standing .table tbody tr.tablerow td.date-time-broadcast.time span,
+.table tbody tr:not(.expandArea) td span {
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana;
+    color: #555;
+    font-size: 13px !important;
+}
+
+@media screen and (min-width:640px) {
+    /* entry page ... assuming links :/ */
+    .panel-primary.widget-resultsoverview .table tbody td:not(.date) span {
+        font-size: 15px !important;
+    }
+}
+
+@media screen and (max-width:639px) {
+    .widget-standing .table tbody tr.tablerow td.date-time-broadcast.date span,
+    .widget-standing .table tbody tr.tablerow td.date-time-broadcast.time span,
+    .table tbody td.date span {
+        font-family: Arial, Helvetica, Verdana, sans-serif;
+        font-size: 12px !important;
+        white-space: nowrap;
+    }
+    .table tbody td.date span {
+        min-width: 38px;
+    }
+}
+
+.widget-standing .table tbody tr.tablerow td.date-time-broadcast.date.time {
+    text-align: right;
+    padding: 4px 8px !important;
+    padding: 8px !important;
+}
+.widget-standing .table tbody tr.tablerow td.date-time-broadcast.time span ~ span {
+    font-weight: 700;
+}
+
+.table tbody tr td,
+.table thead tr td {
+    border-bottom: 0;
+}
+.table tbody tr.tablerow /* :nth-of-type(2n+1) */ {
+    /* border-bottom: 1px solid rgba(0,0,0,.15); */
+}
+
+.table tbody tr.tablerow td, /* content */
+.table tbody tr.tablerow th {
+    height: 40px;
+    padding: 0 8px !important;
+    background-color: #f5f5f2; /* #ebebe5; /* #f5f5f2; */
+    border-top: 2px solid #fff;
+    /* border-bottom: 1px solid rgba(0,0,0,.15); /* #d3d3cd; */
+    border-bottom: 0 !important; /* <-- no links, probably */
+}
+
+.widget-standing .table tbody.tablesection .tablerow .tablecell.competitors,
+.widget-standing .table tbody tr.tablerow td.competitors { /* detailpage curling mobile second row */
+    padding: 4px 8px 4px 16px !important;
+    padding: 8px 8px 8px 16px !important;
+    height: 54px; /* so the .medal-box has the right pos. */
+}
+@media screen and (max-width:639px) {
+    .widget-standing .table tbody.tablesection .tablerow .tablecell.competitors,
+    .widget-standing .table tbody tr.tablerow td.competitors { /* detailpage curling mobile second row */
+        border-top: 0;
+    }
+    .widget-standing .table tbody.tablesection .tablerow .tablecell.competitors:empty,
+    .widget-standing .table tbody tr.tablerow td.competitors:empty {
+        height: inherit;
+        padding: 0 !important;
+    }
+}
+
+@media screen and (min-width:640px) {
+    .table tbody tr.tablerow td { /* content */
+        /* height: 50px; */
+    }
+    .widget-standing .panel-group .panel .panel-collapse .panel-body .tablerow .tablecell.date-time,
+    .widget-standing .panel-group .panel .panel-collapse .panel-body .tablerow .tablecell.gender-event-phase {
+        padding: 0 8px !important;
+        line-height: 38px !important;
+    }
+    .widget-standing .panel-group .panel .panel-collapse .panel-body .tablerow .tablecell.date-time {
+        background-color: #ebebe5;
+        width: 70px;
+    }
+    .widget-standing .panel-group .panel .panel-collapse .panel-body .tablerow td.date-time > div {
+        padding: 0;
+    }
+    .widget-standing .table tbody tr.tablerow td.date-time > div .time {
+        margin-left: 10px; /* overwrite */
+    }
+    .widget-standing .panel-group .panel .panel-collapse .panel-body .tablerow .tablecell.date-time .date span,
+    .widget-standing .panel-group .panel .panel-collapse .panel-body .tablerow .tablecell.date-time .time span {
+        color: #646464;
+    }
+}
+
+.table tbody tr.tablerow:hover td,
+.table tbody tr.tablerow:hover th,
+.table tbody tr.tablerow td.date {
+    background-color: #ebebe5; /* #e2e0d7; /* #ebebe5; */
+}
+.table tbody tr.tablerow td.date {
+    width: 1%;
+    min-width: 40px;
+}
+/* overwrites */
+.table tbody tr.tablerow th {
+    vertical-align: middle;
+}
+.tablerow td.tablecell.event:only-child {
+    border-top: 2px solid #fff;
+}
+/* .tablerow .tablecell:last-child { padding-right: 0; } */
+
+@media screen and (max-width:639px) {
+    .tablerow td.tablecell.event:only-child {
+        background-color: #ebebe5;
+        border-bottom: 1px solid rgba(0,0,0,.15) !important;
+    }
+    .tablerow:hover td.tablecell.event:only-child {
+        background-color: #e2e0d7;
+    }
+    .tablecell.event .anchor span, /* mobile link (top row) */
+    .tablecell.event .anchor:hover span,
+    tr:hover .tablecell.event .anchor:hover span,
+    .tablecell.participant .format-local {  /* mobile row "medal headings left" */
+        background-color: transparent !important;
+        color: #555;
+    }
+    .widget-resultsoverview {
+        margin-bottom: 24px; /* mobile is missing a padding btw. widget & popular ... */
+    }
+}
+
+.panel {
+    box-shadow: none;
+    background-color: transparent;
+}
+
+/* touchup */
+.string-with-image img {
+    margin-right: 8px;
+}
+
+.table tbody tr.tablerow td.event {
+    padding-left: 0;
+}
+
+.tablecell.event .anchor {
+    padding: 9px 8px;
+    display: block;
+}
+
+.tablecell.event .anchor span {
+    padding: 0;
+    /* background-color: #ebebe5; */
+    font-weight: 400;
+    /* display: block; */
+}
+
+@media screen and (min-width:640px) { /* desktop resizing */
+    .tablecell.event .anchor {
+        padding: 10px 8px;
+        min-width: 170px;
+    }
+    .tablecell.event .anchor span {
+        color: #e31f2b;
+        text-decoration: underline;
+        /* background-color: #ebebe5; */
+        font-weight: 400;
+        /* display: block; */
+    }
+    .tablecell.event .anchor:hover span {
+        color: #c91024 !important;
+    }
+}
+@media screen and (max-width:639px) {
+    /* desktop resizing */
+    .tablecell.event .anchor {
+        padding: 0;
+    }
+    .tablecell.event .anchor span {
+        padding: 2px 8px;
+        padding: 0;
+        background-color: #ebebe5;
+        display: block;
+        color: #e31f2b;
+    }
+    .tablecell.event .anchor:hover span {
+        background-color: #dadad2;
+        color: #c91024 !important;
+    }
+}
+
+/* table overview */
+.panel.panel-primary.widget-resultsoverview .panel-body .table thead th.tablecell {
+    height: 30px;
+}
+.panel.panel-primary.widget-resultsoverview .panel-body .table thead th.tablecell .format-local {
+    color: #222;
+}
+/* medaillen */
+.tablerow .tablecell.participant::before {
+    width: 12px;
+    height: 12px;
+    border: 1px solid #fff;
+    margin-bottom: -1px;
+    margin-right: 8px;
+}
+
+/* button */
+button.toggle-button::before {}
+
+.show-more-or-less-buttons {
+    margin: 16px auto;
+}
+
+.phaselist-menu:not(.dropdown-menu) > .pl_item, /* desktop detailpage button */
+.show-more-or-less-buttons .btn {
+    border: 1px solid #e3e3e7;
+    background-image: linear-gradient(to bottom, #f5f5f2 0%, #e2e0d7 100%);
+    border-radius: 2px;
+    font-family: "SRG_SSR_Medium", sans-serif;
+    margin: 16px 0;
+    padding: 6px 16px;
+    border-color: #d3d3ce #c3c1b6 #c3c1b6;
+}
+
+.btn:active, .btn:focus, .btn:hover,
+.show-more-or-less-buttons .btn:active,
+.show-more-or-less-buttons .btn:focus,
+.show-more-or-less-buttons .btn:hover {
+    background-color: #dadad2; /* #f5f5f2; <-- huebscher!! */
+    background-image: none;
+}
+
+.phaselist-menu .pl_item,
+.show-more-or-less-buttons .format-local {
+    font: 15px/21px "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif !important;
+    font-weight: 400 !important;
+    color: #555;
+}
+
+.phaselist-menu .pl_item:hover,
+.show-more-or-less-buttons .btn:hover .format-local {
+    color: #222;
+}
+
+button.toggle-button,
+.show-more-or-less-buttons .icon-chevron-up,
+.show-more-or-less-buttons .icon-chevron-down {
+    background: url(img/arrow_right.svg) no-repeat;
+    background-size: 20px;
+    width: 14px;
+    height: 20px;
+    display: inline-block;
+    opacity: .7;
+}
+button.toggle-button-unchecked,
+.show-more-or-less-buttons .icon-chevron-down {
+    background-position: 2px;
+    transform: rotate(90deg);
+}
+
+button.toggle-button.toggle-button-checked,
+.show-more-or-less-buttons .icon-chevron-up {
+    background-position: 2px;
+    transform: rotate(270deg);
+}
+
+button.toggle-button:hover,
+.show-more-or-less-buttons .btn:hover .icon-chevron-down,
+.show-more-or-less-buttons .btn:hover .icon-chevron-up {
+    opacity: 1;
+}
+
+button.toggle-button::before,
+.show-more-or-less-buttons .icon-chevron-down::before,
+.show-more-or-less-buttons .icon-chevron-up::before {
+    content: "";
+    border: 0 !important;
+}
+
+/* overwrite :/ */
+button.toggle-button:active,
+button.toggle-button:focus,
+button.toggle-button:hover {
+    background: url(img/arrow_right.svg) no-repeat;
+    background-size: 20px;
+    background-position: 2px;
+}
+
+/* end button ... */
+
+
+/* detail page ex ... */
+
+/* ski jump */
+.widget-result-detail-mainlist-view .table th, /* ski alpin */
+.widget-result-detail-preview-view .table th {
+    vertical-align: middle;
+    padding: 4px 8px 4px 0;
+}
+.panel-body.widget-result-detail-mainlist-view .table tr.tablerow th span, /* ski alpin */
+.widget-result-detail-preview-view .table th span {
+    line-height: 15px;
+}
+.results-detail-legend-view .legend-container .header,
+.panel-body.widget-result-detail-mainstandings-view .header,
+.panel-body.widget-result-detail-mainlist-view .header,
+.panel-body.widget-result-detail-startlist-view .header,
+.widget-result-detail-preview-view .header {
+    font: 20px/36px "SRG_SSR_Regular", Arial, Helvetica, Verdana, sans-serif;
+    color: #555;
+    padding: 0;
+    margin: 0 0 8px 0; /* 0 18px 8px 0; */
+    border-bottom: 1px solid #969696;
+    font-weight: 400;
+}
+.widget-result-detail-preview-view div.ResultsDetailPreviewView .header { /* mobile*/
+    margin: 8px 0;
+    margin: 16px 0 8px 0;
+    padding-bottom: 3px;
+    width: 100%;
+}
+.results-detail-legend-view .legend-container .header {
+    display: block;
+}
+.results-detail-legend-view .legend-container {
+    padding: 0;
+    margin: 16px 0 24px;
+}
+
+.panel-body.widget-result-detail-mainlist-view .header {
+    position: relative;
+}
+.panel-body.widget-result-detail-mainlist-view .phase-result-status {
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    padding: 0;
+    bottom: 6px;
+    background: #ffa800; /* sportgelb */
+    padding: 2px 8px;
+}
+.panel-body.widget-result-detail-mainlist-view .phase-result-status span {
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif;
+    font-size: 14px;
+}
+@media screen and (max-width:639px) {
+    .panel-body.widget-result-detail-mainlist-view .phase-result-status {
+        right: 0;
+    }
+}
+
+.panel-body.widget-result-detail-mainlist-view .header .format-local,
+.panel-body.widget-result-detail-mainlist-view .header .phase-name,
+.panel-body.widget-result-detail-startlist-view .header .format-local,
+.widget-result-detail-preview-view .header .format-local {
+    font-family: "SRG_SSR_Regular", Arial, Helvetica, Verdana, sans-serif;
+    color: #555;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.panel-body.widget-result-detail-mainlist-view .header .phase-name {
+    float: none;
+    height: auto;
+    margin: 0;
+}
+.triCodeFlag .label,
+.triCodeFlag .label.sm {
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif;
+    font-size: 13px;
+    color: #555;
+    padding: 0;
+    letter-spacing: 0;
+}
+
+@media screen and (min-width:640px) {
+    .panel-body.widget-result-detail-mainlist-view .resultPhaseColumn {
+        width: 12%;
+        text-align: center;
+    }
+    .panel-body.widget-result-detail-mainlist-view .ResultColumn {
+        text-align: center;
+    }
+
+}
+
+.widget-result-detail-preview-view div.ResultsDetailPreviewView__title { /* titel */
+    width: 100%;
+    margin: 0;
+    padding: 2px 0;
+    border-bottom: 2px solid #fff;
+    border-top: 0;
+    background: #ebebe5;
+    text-indent: 66px; /* titel */
+    font-size: 13px;
+}
+.widget-result-detail-preview-view div.ResultsDetailPreviewView__title span { /* titel */
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif;
+    color: #222;
+}
+.panel-body.widget-result-detail-mainstandings-view .table .triCodeFlag.sm {
+    padding-top: 0;
+}
+.widget-result-detail-preview-view div.ResultsDetailPreviewView__row__flag .triCodeFlag.sm {
+    margin-top: 0;
+}
+.widget-result-detail-preview-view div.ResultsDetailPreviewView__row__text_container__participant {
+    margin-bottom: 0;
+}
+
+.widget-result-detail-preview-view div.ResultsDetailPreviewView__row__text_container__participant span {
+    font-family: "SRG_SSR_Bold", Arial, Helvetica, Verdana, sans-serif;
+    color: #222;
+    font-weight: 400;
+    font-size: 15px;
+}
+.widget-result-detail-preview-view div.ResultsDetailPreviewView__row__text_container__participant span.nameList:first-of-type {
+    margin-top: 0;
+}
+
+.widget-result-detail-preview-view div.ResultsDetailPreviewView__row { /* mobile container*/
+    background-color: #f5f5f2;
+    border-bottom: 2px solid #fff;
+    margin: 0;
+    padding: 8px 16px;
+    width: 100%;
+}
+.widget-result-detail-preview-view div.ResultsDetailPreviewView__row:hover {
+    background-color: #ebebe5;
+}
+.widget-result-detail-preview-view div.ResultsDetailPreviewView__row__text_container__result {
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif;
+    font-size: 15px;
+}
+.widget-result-detail-preview-view div.ResultsDetailPreviewView__row__text_container__result span { /* mobile txt */
+    font-family: "SRG_SSR_Regular", Arial, Helvetica, Verdana, sans-serif;
+    font-size: 14px;
+}
+.widget-result-detail-preview-view div.ResultsDetailPreviewView__row__text_container__result,  /* mobile nr */
+.widget-result-detail-preview-view div.ResultsDetailPreviewView__row__text_container__result span { /* mobile txt */
+    color: #555;
+    line-height: 23px;
+}
+
+@media screen and (min-width:640px) { /* Desktop only */
+    .widget-result-detail-preview-view .table th:not(:nth-of-type(2)) {
+        text-align: center; /* name remains left aligned */
+    }
+    .widget-result-detail-preview-view .table tbody tr td.participant {
+        width: 30%;
+        padding: 0 8px;
+    }
+    .widget-result-detail-preview-view .table tbody tr td.participant span {
+        font-weight: 400;
+    }
+    .widget-result-detail-preview-view .table tbody tr td.results {
+        width: 15%;
+        padding: 0 8px 0 0 !important;
+        text-align: center;
+    }
+    .widget-result-detail-preview-view .table tbody tr td.countryFlag {
+        /* height: 50px; */
+        min-width: 40px;
+        padding: 8px !important; /*padding: 0 4px;*/
+        text-align: center;
+    }
+    .image-countryFlagNoc.image-sm,
+    .image-countryFlagNocGeo.image-sm {
+        /* margin-top: 5px; */
+        width: 24px;
+    }
+    .triCodeFlag .label,
+    .triCodeFlag .label.sm {
+        font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif;
+        font-size: 13px;
+        color: #555;
+        padding: 0;
+        letter-spacing: 0;
+        /* text-align: left; */
+    }
+    .widget-result-detail-preview-view .table .triCodeFlag.sm {
+        /* margin-right: 8px; */
+        margin: 0;
+    }
+}
+/* end detail page ex ski jump */
+
+/* other detail page */
+.panel-tables table tbody .tablerow td.flagColumn, /* curling :/ */
+.panel-body.widget-result-detail-startlist-view .table tbody tr td.TriCodeFlagColumn,
+.panel-body.widget-result-detail-mainlist-view .table tbody tr td.TriCodeFlagColumn,
+.widget-result-detail-mainlist-view .table tbody tr.tablerow .triCodeFlagColumn {
+    height: 45px;
+    text-align: center;
+    padding: 4px 8px !important;
+    padding: 8px !important; /* design :/ */
+}
+.panel-body.widget-result-detail-startlist-view .table tr.tablerow th {
+    height: 30px;
+}
+.panel-body.widget-result-detail-mainlist-view .main-list-expanded-area-table .tablerow td,
+.panel-body.widget-result-detail-mainstandings-view .table tr.tablerow td .main-standings-expanded-area-table .table tbody tr td,
+.panel-body.widget-result-detail-startlist-view .table tr.tablerow td {
+    height: 40px;
+    padding-top: 0 !important;
+    vertical-align: middle;
+}
+@media screen and (max-width:639px) {
+    .panel-body.widget-result-detail-startlist-view .table tr.tablerow td {
+        /* text-align: center; */
+    }
+    .panel-body.widget-result-detail-mainstandings-view .table tbody tr td {
+        padding: 8px;
+    }
+}
+@media screen and (min-width:640px) {
+    .panel-body.widget-result-detail-mainstandings-view .TriCodeFlagColumn {
+        height: 40px;
+    }
+    .TriCodeFlagColumn .triCodeFlag .image-sm {
+        width: 24px;
+        margin-top: 4px;
+    }
+    .triCodeFlag.sm {
+        text-align: center; /* txt beneath flag */
+    }
+}
+
+.panel-body.widget-result-detail-mainlist-view .table tbody tr td span.ListOf1Items {
+    padding-top: 0;
+}
+.panel-body.widget-result-detail-startlist-view .table tbody tr td span.ListOf1Items {
+    margin-top: 0;
+    font-weight: 400;
+}
+.panel-body.widget-result-detail-mainlist-view .table tr.tablerow td {
+    border-bottom: 0;
+}
+.panel-body.widget-result-detail-mainstandings-view .table tbody tr td.ParticipantColumn {
+    width: 45%;
+}
+.panel-body.widget-result-detail-mainstandings-view .mainResult span,
+.panel-body.widget-result-detail-mainstandings-view .ParticipantColumn span,
+.panel-body.widget-result-detail-startlist-view .ParticipantColumn span,
+.panel-body.widget-result-detail-mainlist-view .ParticipantColumn span,
+.panel-body.widget-result-detail-mainlist-view .ResultColumn span,
+.panel-body.widget-result-detail-mainlist-view td span {
+    font-weight: 400 !important;
+}
+.panel-body.widget-result-detail-startlist-view .ParticipantColumn > span,
+.panel-body.widget-result-detail-mainstandings-view .ParticipantColumn span {
+    margin-top: 0 !important;
+    padding-top: 0 !important; /* I mean it!! */
+}
+.panel-body.widget-result-detail-mainlist-view .ExpandButton,
+.panel-body.widget-result-detail-startlist-view .ExpandButton {
+    padding-right: 16px;
+}
+@media screen and (max-width:639px) {
+    .panel-body.widget-result-detail-startlist-view .ExpandButton {
+        text-align: center;
+    }
+}
+/* --------- TST ---------- */
+.table tbody tr.expandArea td {}
+.table tbody tr.expandArea > td,
+.table tbody tr.expandArea:hover > td {
+    /* background-color: #fff; */
+    border-top: 0;
+    background-color: #f5f5f2;
+}
+
+.table tbody tr.expandArea:hover > td td {
+    background-color: #f5f5f2;
+}
+
+.table tbody tr.expandArea > td tr:hover td {
+    background-color: #ebebe5;
+}
+.panel-body.widget-result-detail-mainstandings-view .expandArea .table {
+    margin-bottom: 16px;
+}
+.panel-body.widget-result-detail-mainstandings-view .expandArea .table,
+.panel-body.intermediateTables .table {
+    border: 1px solid #e2e0d7;
+    border-width: 0 1px 1px 1px; /* option: 0 1px 0 1px <-- no brdr below ! */
+    border-width: 0 1px 0 1px;
+}
+.panel-body.intermediateTables tr th,
+.panel-body.intermediateTables tr td {
+    padding: 0 8px;
+    vertical-align: middle;
+}
+.panel-body.intermediateTables tr th span {
+    color: #222;
+}
+
+@media screen and (max-width:639px) {
+    .table.ResultsDetailPreviewView thead tr th span {
+        line-height: 18px; /* lange titelzeile */
+    }
+}
+/* ????? */
+.panel-body.widget-result-detail-mainstandings-view .table tr.tablerow.secondaryInfoTableRow td, /* s. BOB!! */
+.panel-body.widget-result-detail-mainlist-view .table tbody tr.secondaryInfoTableRow > td,
+.panel-body.widget-result-detail-mainlist-view .table tbody tr.secondaryInfoTableRow + .expandArea > td,
+.secondaryInfoTableRow > td {
+    border-top: 0;
+}
+/* mobile view (zB. Bob) second row left part */
+.panel-body.widget-result-detail-mainstandings-view .secondaryInfoHeader .secondaryInfoHeaderText .format-local,
+.panel-body.widget-result-detail-mainstandings-view .secondaryInfoHeader .secondaryInfoHeaderText,
+.panel-body.widget-result-detail-startlist-view .secondaryInfoHeader .secondaryInfoHeaderText .format-local,
+.panel-body.widget-result-detail-startlist-view .secondaryInfoHeader .secondaryInfoHeaderText,
+.panel-body.widget-result-detail-mainlist-view .secondaryInfoHeader .secondaryInfoHeaderText .format-local,
+.panel-body.widget-result-detail-mainlist-view .secondaryInfoHeader .secondaryInfoHeaderText {
+    font-family: "SRG_SSR_Regular", Arial, Helvetica, Verdana, sans-serif;
+    color: #555;
+}
+/* mobile view (zB. Bob) second row right part */
+.panel-body.widget-result-detail-mainlist-view .secondaryInfoContainer .secondaryInfoData span,
+.panel-body.widget-result-detail-startlist-view .secondaryInfoContainer .responsive-component span.ListOf1Items,
+.panel-body.widget-result-detail-startlist-view .secondaryInfoHeader .secondaryInfoData,
+.panel-body.widget-result-detail-mainlist-view .secondaryInfoHeader .secondaryInfoData,
+.panel-body.widget-result-detail-mainlist-view .secondaryInfoHeader .secondaryInfoData span,
+.panel-body.widget-result-detail-mainlist-view .secondaryInfoHeader .secondaryInfoData .number {
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif !important;
+    font-size: 14px !important;
+    color: #555;
+}
+.panel-body.widget-result-detail-mainlist-view .secondaryInfoHeader.resultPhaseColumn {
+    padding: 0;
+    margin: 8px 0 2px;
+}
+.panel-body.widget-result-detail-mainlist-view .table tbody tr.secondaryInfoTableRow td {
+    padding-bottom: 3px;
+    border-top: 0 !important;
+}
+@media screen and (max-width:639px) {
+    .panel-body.widget-result-detail-mainlist-view .table tbody tr.secondaryInfoTableRow td {
+        padding-bottom: 0;
+        border-top: 0;
+    }
+    .panel-body.widget-result-detail-startlist-view .table tbody tr.secondaryInfoTableRow td {
+        padding: 8px 10px !important; /* strange second row in mobile tables */
+        border-top: 0;
+    }
+    .panel-body.widget-result-detail-mainlist-view .table tbody tr.expandArea td, /* ski */
+    .panel-body.widget-result-detail-startlist-view .table tbody tr.expandArea td {
+        border-top: 2px solid #fff;
+    }
+    .panel-body.widget-result-detail-mainlist-view .table tbody tr.expandArea > td, /* ski */
+    .panel-body.widget-result-detail-startlist-view .table tbody tr.expandArea > td {
+        border-top: 0;
+    }
+}
+@media screen and (min-width:640px) {
+    .main-list-expanded-area-table.double-photos, .main-list-expanded-area-table.individual-photos {
+        padding: 16px 16px 16px 0; /* overwrite */
+    }
+}
+.panel-body.widget-result-detail-mainlist-view .main-list-expanded-area-table .secondaryInfoContainer,
+.panel-body.widget-result-detail-startlist-view .secondaryInfoContainer .responsive-component span.ListOf1Items {
+    padding: 3px 0 0;
+}
+.panel-body.widget-result-detail-mainlist-view .secondaryInfoContainer {
+    margin: 0 0 8px;
+}
+.panel-body.widget-result-detail-mainlist-view .secondaryInfoContainer:empty {
+    margin: 0;
+}
+
+
+
+
+/* end other detail page ...*/
+
+/* progress bar */
+.resultDetailProgressBar .format-local {
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif;
+    color: #555;
+    margin-right: 20px;
+}
+
+/* bildli stuff */
+.panel-group.current-box,
+.panel-group.leader-box {
+    margin: 16px 0 8px;
+    display: block;
+    overflow: hidden;
+    background-color: #f5f5f2;
+    padding: 8px;
+}
+@media screen and (min-width:640px) {
+    .panel-group.leader-box {
+        margin-top: 24px;
+    }
+}
+
+.athleteHeadshots__avatar {
+    height: auto;
+    /* min-height: 120px; */
+    position: relative;
+}
+.athleteHeadshots__avatar__country {
+    top: auto;
+    bottom: 0;
+}
+
+.athleteHeadshots__avatar__photo .image-countryFlagNocGeo {
+    width: 100%;
+}
+
+.widget-results-detail .list {
+    background-color: #f5f5f2;
+}
+.list .list-item-medallist {
+    margin: 16px;
+}
+@media screen and (max-width:639px) {
+    .list .list-item-medallist:not(:first-of-type) {
+        margin-top: 0;
+    }
+}
+
+.list-item-medallist .athleteHeadshots__avatar__country__short { /* land */
+    font-size: 16px;
+    font-family: "SRG_SSR_Bold", Arial, Helvetica, Verdana, sans-serif;
+    font-weight: 400;
+}
+.list .list-item-medallist .box-name {
+    margin-top: 8px;
+}
+.list-item-medallist .box-medal .icon-medal {
+    color: #222;
+}
+
+.player-info-wrapper .header {
+    margin-left: 22px;
+}
+
+.player-info-wrapper .header .format-local {
+    font-family: "SRG_SSR_Bold", Arial, Helvetica, Verdana, sans-serif;
+    color: #222;
+    font-size: 22px;
+    /* margin-left: 2px; */
+    font-weight: 400;
+}
+.player-info-wrapper .player-info .bib,
+.player-info-wrapper .player-info .name {
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif;
+    color: #222;
+    margin-right: 8px;
+}
+/* .player-info-wrapper .player-info .bib { margin: 0 8px 0 24px; } */
+
+.player-info-wrapper .player-info {
+    margin: 0 22px; /* <---- very very odd ... */
+    display: inline-block;
+}
+
+/* country flags :/ */
+.list .list-item-medallist {
+    padding: 0;
+    display: inline-block;
+    vertical-align: top;
+}
+.list .list-item-medallist .box-name span { /* namelist beneath flag */
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana;
+    font-size: 14px;
+    font-weight: 400;
+    color: #555;
+}
+
+/* next ... */
+.results-detail-next {
+    margin-bottom: 0;
+}
+.results-detail-next .content-container {
+    margin-left: 0;
+}
+.results-detail-next .content-container .participant-list {
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif;
+}
+.start-list-expanded-area {
+    padding-bottom: 0;
+    min-height: 150px;
+}
+.start-list-expanded-area .participant-extended-infolist-item-header {
+    font-size: 14px;
+    color: #555;
+}
+.start-list-expanded-area .participant-extended-infolist-item-info {
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif;
+    font-size: 15px;
+    color: #555;
+}
+.start-list-expanded-area .start-list-expanded-area-item { /* img */
+    margin-bottom: 16px;
+}
+.start-list-expanded-area .start-list-expanded-area-item.major-results {
+    border-bottom: 1px solid #969696;
+}
+
+@media screen and (max-width:639px) {
+    .start-list-expanded-area .start-list-expanded-area-item:not(:first-of-type) .participant-headshot,
+    .start-list-expanded-area .start-list-expanded-area-item:not(:first-of-type) .participant-info {
+        margin-top: 0;
+    }
+
+}
+
+/* some faces .. */
+.panel-body.widget-result-detail-mainlist-view .table tbody tr.expandArea > td {
+    border-bottom: 0;
+    /* border-top: 2px solid #fff; */
+    background: #f5f5f2;
+}
+.main-list-expanded-area,
+.main-list-expanded-area-photo-wrapper.team-photos {
+    padding: 0;
+    margin: 0;
+}
+@media screen and (min-width:640px) {
+    .main-list-expanded-area-photo-wrapper.double-photos .main-list-expanded-area-photo:not(:first-of-type) {
+        /* margin-top: 16px; */ /* <------ ????? where from ???? */
+    }
+}
+@media screen and (max-width:639px) {
+    .main-list-expanded-area-photo-wrapper.individual-photos .main-list-expanded-area-photo {
+        margin: 0; /* overwrite :/ */
+    }
+    .panel-body.widget-result-detail-mainstandings-view .expandArea .table,
+    .panel-body.intermediateTables .table {
+        border-width:  0 /* 0 0 1px */ !important;
+        margin: 0 -8px 24px -8px;
+        width: calc(100% + 16px);
+    }
+}
+
+/* generic??
+.main-list-expanded-area .main-list-expanded-area-photo-wrapper .main-list-expanded-area-photo
+*/
+.main-list-expanded-area-photo-wrapper.team-photos .main-list-expanded-area-photo {
+    padding: 16px;
+    margin: 0;
+    width: auto;
+}
+.main-list-expanded-area-photo-wrapper.double-photos .main-list-expanded-area-photo-participant-bib,
+.main-list-expanded-area-photo-wrapper.team-photos .main-list-expanded-area-photo-participant-bib {
+    text-align: center;
+}
+.main-list-expanded-area-photo-participant-bib { /* beneath foto */
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana;
+    color: #555;
+}
+.main-list-expanded-area-photo-participant-name {
+    font-size: 13px;
+    color: #555;
+}
+.main-standings-expanded-area-photo-wrapper.double-photos .main-list-expanded-area-photo-participant-name,
+.main-list-expanded-area-photo-wrapper.double-photos .main-list-expanded-area-photo-participant-name {
+    margin-bottom: 8px;
+}
+
+@media screen and (min-width:640px) { /* desktop */
+    .main-list-expanded-area-photo-wrapper {
+        padding: 16px;
+    }
+}
+.main-list-expanded-area .FRSSBDJudgeScoresTables .table {
+    margin: 16px 0 24px;
+}
+
+
+
+/* some more expanding ... stuff */
+.panel-body.widget-result-detail-mainstandings-view tr td .main-standings-expanded-area-table {
+    margin-top: 16px;
+}
+.panel-body.widget-result-detail-mainstandings-view .table tr.tablerow td .main-standings-expanded-area-table .table thead tr th,
+.panel-body.widget-result-detail-mainstandings-view .table tr.tablerow td .main-standings-expanded-area-table .table tbody tr td {
+    padding: 0 8px;
+}
+.panel-body.widget-result-detail-mainstandings-view .table tr.tablerow td .main-standings-expanded-area-table .table thead tr th .format-local {
+    font-weight: 400;
+}
+
+.panel-body.widget-result-detail-mainstandings-view .table tbody tr td.ExpandButton,
+.panel-body.widget-result-detail-mainstandings-view .table tbody tr td.mainResult,
+.panel-body.widget-result-detail-mainstandings-view .table tbody tr td.NumericColumn,
+.panel-body.widget-result-detail-mainstandings-view .table tbody tr td.ODFQualificationMark,
+.panel-body.widget-result-detail-mainstandings-view .table tbody tr td.ParticipantColumn,
+.panel-body.widget-result-detail-mainstandings-view .table tbody tr td,
+.panel-body.widget-result-detail-mainstandings-view .table tbody tr td span {
+    padding-top: 0;
+}
+/* s. Bob Open Viererbob */
+.main-list-expanded-area-photo .main-list-expanded-area-photo-participant-name,
+.main-list-expanded-area-photo-wrapper.team-photos .main-list-expanded-area-photo-participant-name,
+.panel-body.widget-result-detail-mainstandings-view tr td .main-standings-expanded-area-photo-wrapper.team-photos .main-list-expanded-area-photo-participant-name {
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif; /* the label */
+    text-align: center;
+}
+.panel-body.widget-result-detail-mainstandings-view tr td .main-standings-expanded-area-photo-wrapper {
+    padding: 16px;
+}
+.panel-body.widget-result-detail-mainstandings-view tr td .main-standings-expanded-area-photo-wrapper.double-photos .main-list-expanded-area-photo {
+    margin: 0 16px 0 0; /*eiskunstlauf mixed paare */
+}
+.panel-body.widget-result-detail-mainstandings-view tr td .main-standings-expanded-area { /* <-- the whole area (incl. photos & tables...) */
+    background-color: #f5f5f2; /* #fff; */; /*s RODELN! */
+}
+
+.participant-info-block .participant-info-item-label,
+.participant-info-block .participant-info-item-text,
+.participant-info .participant-info-item-name,
+.participant-info .participant-info-item-label,
+.participant-info .participant-info-item-label .format-local,
+.participant-info .participant-info-item-text {
+    color: #555;
+    /* font-size: 15px; /* <-- TODO: check!! */
+    font-size: 14px;
+}
+.participant-info-block .participant-info-item-label,
+.participant-info .participant-info-item-label,
+.participant-info .participant-info-item-label .format-local {
+    font-family: "SRG_SSR_Regular", Arial, Helvetica, Verdana, sans-serif;
+    font-size: 14px;
+}
+.start-list-expanded-area .participant-extended-fskplanned-header,
+.start-list-expanded-area .participant-extended-fskplanned-header .format-local,
+.participant-info-block .participant-info-item-text,
+.participant-info .participant-info-item-name,
+.participant-info .participant-info-item-text {
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif;
+    font-size: 14px;
+}
+.start-list-expanded-area .participant-extended-fskplanned-header,
+.start-list-expanded-area .participant-extended-fskplanned-header .format-local,
+.participant-info .participant-info-item-name {
+    color: #222;
+    font-weight: 400;
+}
+/* .start-list-expanded-area .participant-info-block-name, */
+.start-list-expanded-area .participant-info-item-name,
+.participant-extended-fskplanned-header {
+    margin-bottom: 8px;
+}
+/* more eiskunst ... */
+.start-list-expanded-area .participant-extended-fskplanned-list {
+    margin-bottom: 24px;
+}
+@media screen and (max-width:639px) {
+    .start-list-expanded-area .participant-extended-fskplanned-list {
+        margin-bottom: 16px;
+    }
+}
+.start-list-expanded-area .participant-extended-fskplanned-list div {
+    font-size: 14px;
+    color: #555;
+}
+
+/* second page back button mess: */
+
+.back-to-previous-widget .glyphicon-chevron-left::before {
+    content: none;
+}
+.anchor.back-to-previous-widget {
+    position: absolute; /* relative; */
+    display: block;
+    width: 80px; /* 100px; */
+    height: 39px; /* check size! */
+    margin: 0;
+    top: 0;
+}
+.back-to-previous-widget .glyphicon-chevron-left {
+    background: url(img/fat_arrow_left.svg) no-repeat;
+    left: -28px;/* -32px; */
+    left: -35px;
+    top: 4px;
+    top: 13px; /* altered from program :/ */
+    height: 15px;
+    height: 12px;
+    width: 7px;
+    transform-origin: center center; /* hoioioi */
+    background-size: 7px;
+    /* opacity: .7; */
+}
+.anchor.back-to-previous-widget::after {
+    content: "Zurück";
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif;
+    color: #222;
+    font-size: 14px;
+    line-height: 29px;
+    text-transform: uppercase;
+    text-align: left; /* text-align: right; */
+    position: absolute;
+    right: 14px; /* 8px; /* 16px; */
+    top: 4px; /* <-- altered from program */
+    bottom: 0;
+}
+.anchor.back-to-previous-widget:hover::after {
+    text-decoration: underline;
+}
+
+.panel-primary.widget-match-detail > .panel-heading .sport,
+.panel-primary.widget-match-detail > .panel-heading .genderevent {
+    /* color: #555; */
+}
+
+/* .anchor.back-to-previous-widget:hover { background-color: #f5f5f2; }
+.anchor.back-to-previous-widget:hover::after { color: #222; } */
+
+/* end second page button mess */
+
+/* copied from here ...*/
+.widget-match-detail-preview {
+    /* padding: 8px 0 32px; */
+    margin-top: 8px;
+    padding: 0;
+}
+
+.widget-match-detail-preview table thead th.tablecell {
+    border-bottom: 0;
+}
+.widget-match-detail-preview table {
+    border-bottom: 2px solid #fff;
+}
+.widget-match-detail-preview table td.tablecell span {
+    font-size: 13px !important;
+}
+.widget-match-detail-preview table thead tr th.tablecell div.medal-box,
+.widget-match-detail-preview table thead th div.medal-box {
+    top: 1px;
+    width: 12px;
+    height: 12px;
+    float: none !important;
+    display: inline-block;
+    margin-left: 0 !important;
+    margin-right: 5px; /* margin-right: ??? */
+}
+
+@media screen and (max-width:640px) {
+    .widget-match-detail-preview table thead tr th.tablecell {
+        padding: 5px;
+        border-bottom: 0;
+    }
+    .widget-match-detail-preview table thead tr th.tablecell div.medal-box,
+    .widget-match-detail-preview table thead th div.medal-box { top: 5px; } /* it's empty! */
+}
+
+.match-detail-person-statistics-competidors-name,
+.widget-match-detail-preview .key-results-competitors-left-flag-name,
+.widget-match-detail-preview .key-results-competitors-right-flag-name,
+.panel-primary .panel-body.widget-match-detail-team-stats-view .away-team .team span,
+.panel-primary .panel-body.widget-match-detail-team-stats-view .home-team .team span,
+.panel-primary .panel-body.widget-match-detail-line-up-view .away-team .team span,
+.panel-primary .panel-body.widget-match-detail-line-up-view .home-team .team span {
+    font-family: "SRG_SSR_Regular", Arial, Helvetica, Verdana, sans-serif;
+    color: #222;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 5px 16px;
+}
+.match-detail-person-statistics-competidors-name {
+    display: inline-block;
+    float: none;
+    margin: 0 16px;
+}
+@media screen and (min-width:640px) {
+    .match-detail-person-statistics-competidors-name {
+        display: inline-block;
+        line-height: 20px;
+    }
+}
+
+
+@media screen and (max-width:639px) { /* mobile */
+    .match-detail-person-statistics-competidors-name, /* all sorts of country names :/ */
+    .widget-match-detail-preview .key-results-competitors-left-flag-name,
+    .widget-match-detail-preview .key-results-competitors-right-flag-name,
+    .panel-primary .panel-body.widget-match-detail-team-stats-view .away-team .team span,
+    .panel-primary .panel-body.widget-match-detail-team-stats-view .home-team .team span,
+    .panel-primary .panel-body.widget-match-detail-line-up-view .away-team .team span,
+    .panel-primary .panel-body.widget-match-detail-line-up-view .home-team .team span {
+        display: inline-block;
+        float: none;
+        margin: 0 16px;
+        font-size: 14px;
+        line-height: 15px;
+        /* font-weight: 400; */
+    }
+    .widget-match-detail-preview .key-results-competitors-right-flag {
+        margin-top: 3px; /* will be the second (mobile!) */
+    }
+}
+@media screen and (max-width:639px) { /* <-- to go??? */
+    .match-detail-person-statistics-competidors-name,
+    .widget-match-detail-preview .key-results-competitors-left-flag-name,
+    .widget-match-detail-preview .key-results-competitors-right-flag-name,
+    .panel-primary .panel-body.widget-match-detail-team-stats-view .away-team .team span,
+    .panel-primary .panel-body.widget-match-detail-team-stats-view .home-team .team span,
+    .panel-primary .panel-body.widget-match-detail-line-up-view .away-team .team span,
+    .panel-primary .panel-body.widget-match-detail-line-up-view .home-team .team span {
+        display: inline-block;
+        float: none;
+        margin: 0 16px;
+        font-size: 14px;
+        line-height: 15px;
+        font-weight: 400;
+    }
+    /* .panel-primary .panel-body.widget-match-detail-line-up-view .home-team .team span, /* curling */
+    /* .widget-match-detail-preview .key-results-competitors-left-flag-name {  /* hockey */ /*
+        display: inline;
+        line-height: 16px;
+        float: none;
+    } */
+    .widget-match-detail-preview .key-results-competitors-right-flag {
+        margin-top: 3px;/* will be the second (mobile!) */
+    }
+}
+
+.panel-primary .match-detail-person-statistics .match-detail-person-statistics-competidors,
+.panel-primary .panel-body.widget-match-detail-line-up-view .away-team .team,
+.panel-primary .panel-body.widget-match-detail-line-up-view .home-team .team,
+.panel-primary .panel-body.widget-match-detail-team-stats-view .away-team .team, /* bg behind flag ... */
+.panel-primary .panel-body.widget-match-detail-team-stats-view .home-team .team,
+.panel-primary .panel-body .away-team .team, /* bg behind flag ... */
+.panel-primary .panel-body .home-team .team {
+    padding: 8px;
+    margin: 8px 0; /* 8px 0 8px; */
+    background-color: #f5f5f2;
+    /* overflow: hidden; */
+}
+.panel-primary .match-detail-person-statistics .match-detail-person-statistics-competidors {
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}
+.widget-match-detail-preview .key-results-competitors { /* titel flagge land */
+    margin: 8px 0 2px;
+    padding: 8px;
+    background-color: #f5f5f2;
+}
+
+.panel-primary .panel-body .away-team .team > div,
+.panel-primary .panel-body .home-team .team > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+.match-detail-person-statistics-competidors img,
+.panel-primary .panel-body .away-team .team img,
+.panel-primary .panel-body .home-team .team img {
+    margin: 0;
+    float: none;
+}
+
+.image-countryFlagNoc.image-sm,
+.image-countryFlagNocGeo.image-sm {
+    width: 24px; /* terrible within ski alpin mixed team :/ */
+}
+/* .image-countryFlagNoc.image-sm, .image-countryFlagNocGeo.image-sm { */
+.ResultsDetailPreviewView__row .image-countryFlagNoc.image-sm,
+.ResultsDetailPreviewView__row .image-countryFlagNocGeo.image-sm {
+    width: 35px; /* terrible within ski alpin mixed team :/ */
+}
+
+
+/* curling ... */
+.widget-match-detail-preview .competitors,
+.header,
+.widget-match-detail-preview .olympic-name,
+.widget-match-detail-preview .last-major-results,
+.widget-match-detail-preview .key-results-competitors {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}
+.widget-match-detail-preview .last-major-results {
+    border: 0; /*border-top: 1px solid #969696; */
+    margin: 8px 0 16px;
+}
+.widget-match-detail-preview .competitors {
+    border-top: 1px solid #222; /* #969696; */
+    border-bottom: 1px solid #222; /* #969696; */
+    border: 0;
+    padding: 16px 0;
+    margin-bottom: 16px;
+    background-color: #f5f5f2;
+}
+
+@media screen and (min-width:640px) {
+    .widget-match-detail-preview .competitors {
+        padding: 24px 0;
+        margin-bottom: 24px;
+    }
+    .widget-match-detail-preview .competitors-names {
+        width: calc(100% - 182px);
+    }
+}
+.widget-match-detail-preview .competitors-left-flag {
+    padding: 0 0 0 16px;
+}
+.widget-match-detail-preview .competitors-right-flag {
+    padding: 0 16px 0 0;
+}
+
+.widget-match-detail-preview .have-never-played {
+    background-color: #f5f5f2;
+    padding: 16px;
+    margin: 0 0 24px 0;
+}
+
+.widget-match-detail-preview .have-never-played .format-local {
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif;
+    font-size: 13px;
+    color: #555;
+}
+
+.widget-match-detail-preview .header,
+.widget-match-detail-preview .header .format-local {
+    font-family: SRG_SSR_Medium;
+    color: #222;
+    font: 20px/36px "SRG_SSR_Regular", Arial, Helvetica, Verdana, sans-serif;
+    text-align: left;
+    padding: 0;
+}
+.widget-match-detail-preview .header {
+    margin: 8px 0 2px 0; /* <--- oioioi ! */
+    display: inline-block;
+    border-bottom: 1px solid #969696;
+}
+.widget-match-detail-preview .header .format-local {
+    font: 20px/36px "SRG_SSR_Regular", Arial, Helvetica, Verdana, sans-serif;
+    color: #555;
+    font-weight: 400;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+.widget-match-detail-preview .competitors-names .label {
+    font-family: "SRG_SSR_Bold", Arial, Helvetica, Verdana, sans-serif;
+    color: #222;
+}
+@media screen and (max-width:640px) {
+    .widget-match-detail-preview .competitors-splitter {
+        top: 63px;
+    }
+}
+.widget-match-detail-preview .last-major-results .results-item-score,
+.widget-match-detail-preview .last-major-results .results-item-competition {
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif;
+    color: #555;
+}
+
+.widget-match-detail-preview .last-major-results .results-item-place,
+.widget-match-detail-preview .last-major-results .results-item-place .time span {
+    font-family: "SRG_SSR_Regular", Arial, Helvetica, Verdana, sans-serif;
+    color: #555;
+}
+.widget-match-detail-preview .olympic-name {
+    font-family: "SRG_SSR_Regular", Arial, Helvetica, Verdana, sans-serif;
+    color: #222;
+    display: none; /* what the heck is this for??? */
+}
+@media screen and (max-width:640px) {
+    .widget-match-detail-preview .olympic-name {
+        margin: 8px 22px 0 0; /* <-- 22px :( */
+        font-size: 14px;
+    }
+}
+
+.widget-match-detail-preview .last-major-results .results-item {
+    padding: 16px 0;
+    border-bottom: 2px solid #fff; /* #969696; */
+    background: #f5f5f2;
+}
+
+@media screen and (max-width:640px) {
+    .widget-match-detail-preview .last-major-results .results-item {
+        padding: 8px;
+    }
+    .widget-match-detail-preview .last-major-results .results-item-competition,
+    .widget-match-detail-preview .last-major-results .results-item-place,
+    .widget-match-detail-preview .last-major-results .results-item-place .time span {
+        font-size: 15px;
+    }
+}
+.panel-body.widget-result-detail-startlist-view .table tbody tr td.TriCodeFlagColumn,
+.panel-body.widget-result-detail-mainlist-view .table tbody tr td.TriCodeFlagColumn,
+.widget-result-detail-mainlist-view .table tbody tr.tablerow .triCodeFlagColumn {
+    height: 45px;
+    text-align: center;
+}
+.table tbody tr.tablerow .numericColumn,
+.table tbody tr.tablerow .competitorColumn {
+    /* height: 50px; /* <----------------- ?????? */
+}
+.table tbody.tablesection tr.tablerow td.numericColumn {
+    /* text-align: center; /* padding-left: 25px; */
+}
+.widget-match-detail-preview table thead th.MedalHeader {
+    width: 10%;
+    min-width: 70px;
+    /* text-align: center; */
+}
+.widget-match-detail-preview table thead th.MedalHeader,
+.widget-match-detail-preview table thead th.tablecell {
+    padding: 8px;
+}
+.widget-match-detail-preview table thead th.MedalHeader span {
+    float: none;
+}
+
+/* more widget match details (curling | icehockey ?)*/
+.panel-primary .panel-body .away-team .table tr td,
+.panel-primary .panel-body .home-team .table tr td {
+    border-top: 2px solid #fff;
+    padding: 0;
+}
+.panel-primary .panel-body.widget-match-detail-team-stats-view .table tbody tr:first-child td {
+    border-top: 0;
+}
+.panel-primary .panel-body.widget-match-detail-team-stats-view .table tbody tr td {
+    height: 40px;
+}
+.widget-match-detail .navtab-container .navtab-top-left {
+    border: 0;
+    text-align: center;
+    padding: 0;
+}
+.panel-primary .panel-body .lineup-table .header { /* titel */
+    font: 20px/36px SRG_SSR_Regular;
+    color: #555;
+    text-align: left;
+    border-bottom: 1px solid #969696;
+    padding: 0;
+    margin: 24px 0 8px 0;
+    font-weight: 400;
+}
+
+/* -------- scoreboard ---------- */
+.widget-match-detail-scoreboard-view .periods {
+    padding: 0;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+    display: inline-block;
+}
+/* nothing | period-table */
+
+.widget-match-detail-scoreboard-view .status .label {
+    color: #222;
+}
+
+.widget-match-detail-scoreboard-view .table tr td.status,
+.widget-match-detail-scoreboard-view .table tr.tablerow td {
+    border-top: 0;
+}
+@media screen and (max-width:639px) { /* desktop */
+    .widget-match-detail-scoreboard-view .table tr td.status {
+        height: 30px;
+    }
+}
+
+.widget-match-detail-scoreboard-view .table.period-table,
+.widget-match-detail-scoreboard-view table {
+    padding: 0;
+}
+.widget-match-detail-scoreboard-view .table.period-table {
+    max-width: 330px;
+    margin: 16px auto 24px;
+}
+.widget-match-detail-scoreboard-view .table:not(.period-table) {
+    margin: 8px 0 16px; /* 16px 0 24px; */
+}
+
+.widget-match-detail-scoreboard-view .table.period-table .row-periods td,
+.widget-match-detail-scoreboard-view .table.period-table tr.row-periods:hover td {
+    background-color: #ebebe5;
+    height: 30px;
+    color: #555;
+    font-size: 13px;
+    border: 0;
+}
+
+.widget-match-detail-scoreboard-view .table tr.tablerow:hover td {
+    background-color: #f5f5f2;
+}
+
+.widget-match-detail-scoreboard-view .box-competitor-name .label,
+.widget-match-detail-scoreboard-view .versus .label,
+.widget-match-detail-scoreboard-view .score .label {
+    font-family: SRG_SSR_Bold;
+    color: #222;
+    font-size: 28px !important;
+    /* padding: 16px 0 0; /* 16px; */
+}
+
+@media screen and (min-width:640px) { /* desktop */
+    .widget-match-detail-scoreboard-view .box-competitor-name {
+        padding: 8px 8px 0 !important;
+    }
+    .widget-match-detail-scoreboard-view .score {
+        padding: 8px 0 0 !important;
+    }
+    .widget-match-detail-scoreboard-view .team.one.box-flag { /* links */
+        padding: 24px 0 24px 16px;
+    }
+    .widget-match-detail-scoreboard-view .team.two.box-flag { /* rechts */
+        padding: 24px 16px 24px 0;
+    }
+    .widget-match-detail-scoreboard-view .table tr td.box-competitor-name,
+    .widget-match-detail-scoreboard-view .table tr td.score {
+        height: 68px;
+    }
+    .widget-match-detail-scoreboard-view .table tr td .image-countryFlagNoc {
+        width: 90px;
+    }
+    .widget-match-detail-scoreboard-view .table tr td.status {
+        height: 30px;
+    }
+    .widget-match-detail-scoreboard-view .table:not(.period-table) tr td .image-countryFlagNocGeo {
+        /* width: 100%; /* topmost table flag (75px ?) */
+    }
+    .widget-match-detail-scoreboard-view .table.period-table tr td .image-countryFlagNocGeo {
+        width: 36px; /* period-table flag */
+    }
+}
+@media screen and (max-width:639px) { /* mobile */
+    .widget-match-detail-scoreboard-view .team.box-flag {
+        padding: 8px;
+    }
+    .widget-match-detail-scoreboard-view .box-competitor-name .label,
+    .widget-match-detail-scoreboard-view .versus .label,
+    .widget-match-detail-scoreboard-view .score .label {
+        padding: 0;
+        font-size: 20px !important;
+    }
+    .widget-match-detail-scoreboard-view .versus .label {
+        padding-top: 8px;
+    }
+    .widget-match-detail-scoreboard-view .periods {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .widget-match-detail-scoreboard-view .period-table td.cell-hammer,
+    .widget-match-detail-scoreboard-view .period-table td.cell-flag,
+    .widget-match-detail-scoreboard-view .period-table td.cell-score {
+        padding: 0 7px;
+    }
+}
+.widget-match-detail-scoreboard-view .period-table td {
+    font-size: 14px;
+    color: #555;
+}
+.widget-match-detail-scoreboard-view .period-table td.cell-score.final {
+    color: #222;
+}
+
+/* spielerstat */
+.matchDetailPersonStatisticsTable table thead tr th.groupingHeader1,
+.matchDetailPersonStatisticsTable table thead tr th.groupingHeader2,
+.matchDetailPersonStatisticsTable table thead tr th.groupingHeader3,
+.matchDetailPersonStatisticsTable table thead tr th.groupingHeader4 {
+    text-align: center;
+}
+
+
+/* -------- end scoreboard ---------- */
+/* mannschaftsstat .. */
+.panel-primary .panel-body.widget-match-detail-team-stats-view .away-team .team img,
+.panel-primary .panel-body.widget-match-detail-team-stats-view .home-team .team img {
+    margin-top: 0;
+}
+.panel-primary .panel-body .away-team .coach,
+.panel-primary .panel-body .home-team .coach {}
+
+.panel-primary .panel-body .away-team .coach:empty,
+.panel-primary .panel-body .home-team .coach:empty {
+    display: none;
+}
+.panel-primary .panel-body .referee-linesmen-attendance {
+    text-align: left;
+}
+.panel-primary .panel-body .referee-linesmen-attendance span {
+    font-size: 20px;
+    color: #555;
+}
+.widget-match-detail .navtab-container {
+    margin-bottom: 24px;
+}
+.widget-match-detail .navtab-container .navtab-top-left {
+    overflow: initial; /*desktop*/
+}
+.widget-match-detail .navtab-container .navtab-top-left .nav-tabs li {
+    border: 0;
+}
+.widget-match-detail .navtab-container .navtab-top-left .nav-tabs li a,
+.widget-match-detail .navtab-container .navtab-top-left .nav-tabs li.active a  {
+    top: 0;
+    margin: 0;
+}
+
+/* spielerstat & aufstellung mobile */
+@media screen and (max-width:639px) {
+    .widget-match-detail .navtab-container { /* move the margin :/ */
+        margin-bottom: 0;
+    }
+    .panel-primary .match-detail-person-statistics .match-detail-person-statistics-competidors, /* aufstellung */
+    .panel-primary .panel-body.widget-match-detail-team-stats-view .home-team .team, /* mannschaftsstat. */
+    .panel-primary .panel-body.widget-match-detail-team-stats-view .away-team .team,
+    .panel-primary .panel-body.widget-match-detail-line-up-view .home-team .team, /* playerstat. */
+    .panel-primary .panel-body.widget-match-detail-line-up-view .away-team .team {
+        margin-top: 24px
+    }
+    .widget-match-detail-preview .key-results-competitors {
+        margin-top: 24px; /* both :/ */
+    }
+    .widget-match-detail-preview .header + .key-results-competitors {
+        margin-top: 8px; /* reset :/ */
+    }
+}
+
+/* -------------- "tabs" hockey ------------ */
+@media screen and (min-width:640px) {
+    .widget-match-detail .navtab-container .navtab-top-left .nav-tabs li.tab:first-child {
+        margin-left: 16px
+    }
+}
+@media screen and (max-width:639px) {
+    .widget-match-detail .navtab-container .navtab-top-left .nav-tabs { /* ul */
+        margin: 0 -4px;
+    }
+    .widget-match-detail .navtab-container .navtab-top-left .nav-tabs .tab { /* li */
+        /* margin: 0 4px; */
+        /* width: auto; */
+    }
+    .widget-match-detail .navtab-container .navtab-top-left .nav-tabs .tab a:hover,
+    .widget-match-detail .navtab-container .navtab-top-left .nav-tabs .tab a:focus,
+    .widget-match-detail .navtab-container .navtab-top-left .nav-tabs .tab a:active,
+    .widget-match-detail .navtab-container .navtab-top-left .nav-tabs .tab a:visited, /* :/ */
+    .widget-match-detail .navtab-container .navtab-top-left .nav-tabs .tab a {
+        min-width: 155px;
+    }
+    .panel-primary.widget-match-detail .navtab-container .navtab-top-left .nav-tabs li.tab:first-child a,
+    .panel-primary.widget-match-detail .navtab-container .navtab-top-left .nav-tabs li.active a {
+        top: 0;
+        padding: 6px 16px;
+        margin: 0;
+    }
+    .panel-primary.widget-match-detail .navtab-container .navtab-top-left .nav-tabs li.tab:first-child {
+        margin-left: 4px;
+    }
+}
+@media screen and (min-width:506px) and (max-width:639px)  {
+    .widget-match-detail .navtab-container .navtab-top-left .nav-tabs .tab { /* li */
+        margin: 0 4px;
+        width: auto;
+    }
+}
+@media screen and (max-width:505px) {
+    .widget-results-detail .navtab-container .navtab-top-left .nav-tabs li.active, /* if there would be 3! :/ */
+    .widget-match-detail .navtab-container .navtab-top-left .nav-tabs li.active { /* curling | hockey */
+        /* display: none; */
+    }
+}
+
+@media screen and (max-width:400px) {
+    .widget-match-detail .navtab-container .navtab-top-left .nav-tabs li:not(.active) a .format-local {
+        text-transform: initial;
+    }
+}
+
+/* -------------- end "tabs" hockey ------------ */
+
+/*-------------- player stats ("mobile" only) ------------  */
+@media screen and (max-width:767px) {
+    .panel-primary .panel-body.widget-match-detail-team-stats-view .table {
+        border-top: 2px solid #fff; /* in accordance with 2px below! */
+    }
+    .person-statistics-mobile { /* container */
+        width: 100%;
+        padding: 8px;
+        margin: 0;
+        border-top: 2px solid #fff;
+        background-color: #f5f5f2;
+        overflow: hidden;
+    }
+    .person-statistics-mobile-first-line-data div {
+        color: #222;
+        font-size: 15px;
+    }
+    .person-statistics-mobile-first-line-data:nth-of-type(3) {
+        margin-bottom: 3px;
+    }
+    .person-statistics-mobile-first-line-data:nth-of-type(3) div { /* name */
+        font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif;
+        color: #222;
+        font-size: 15px;
+    }
+    .person-statistics-mobile-lines { /* gruppe */
+        border-bottom: 0;
+        margin-top: 8px;
+    }
+    .person-statistics-mobile-lines-group { /* titel */
+        font: 13px/13px "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif;
+        color: #222;
+        font-size: 13px;
+        background-color: #ebebe5;
+        padding: 6px 0;
+        text-indent: 4px;
+    }
+    .person-statistics-mobile-lines-data-header, /* untertitel */
+    .person-statistics-mobile-lines-data-info { /* data */
+        font: 13px/23px "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif;
+        color: #555;
+    }
+    .person-statistics-mobile-lines-data-info { /* data */
+    }
+}
+@media screen and (min-width:767px) {
+    .matchDetailPersonStatisticsTable table thead.tablesection:first-of-type tr th {
+        padding: 4px 8px 0 !important;
+        height: 22px !important;
+    }
+    .matchDetailPersonStatisticsTable table thead.tablesection:nth-of-type(2) tr.tablerow th {
+        padding: 0 8px 2px !important;
+        height: 23px !important;
+    }
+}
+/*-------------- end player stats (mobile only) ------------  */
+/*-------------- more curling ... ------------  */
+.matchDetailPersonStatisticsTable table tbody tr td.personName {
+    padding-top: 0;
+}
+.matchDetailPersonStatisticsTable table tbody tr td.CURFunction {
+    padding: 0 8px;
+    vertical-align: middle;
+}
+.matchDetailPersonStatisticsTable table tbody tr.secondaryInfoTableRow td {
+    border-top: 0;
+    padding: 3px 8px;
+}
+.matchDetailPersonStatisticsTable table thead tr th.GAME,
+.matchDetailPersonStatisticsTable table thead tr td.DRAW,
+.matchDetailPersonStatisticsTable table thead tr th.TAKEOUT,
+.matchDetailPersonStatisticsTable table thead tr th.CCW,
+.matchDetailPersonStatisticsTable table thead tr th.cW,
+.matchDetailPersonStatisticsTable table thead tr th.TOURN,
+.matchDetailPersonStatisticsTable table tbody tr td.GAME,
+.matchDetailPersonStatisticsTable table tbody tr td.DRAW,
+.matchDetailPersonStatisticsTable table tbody tr td.TAKEOUT,
+.matchDetailPersonStatisticsTable table tbody tr td.TOURN {
+    padding: 0 8px;
+    border-left: 0;
+    border-right: 0;
+}
+.panel-primary .panel-body.widget-match-detail-team-stats-view .table tbody tr td.relative-value span {
+    color: #555;
+}
+/*-------------- end more curling ... ------------  */
+
+
+/* venue stuff ... */
+
+/*  copied down to here ...*/
+
+.panel-body .venue {
+    margin: 0; /* margin: 0 8px; ??? /* <-- 10px :( */
+    padding: 0;
+}
+
+.panel-body .venue,
+.panel-body .venue span {
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif;
+    color: #555;
+    font-weight: 400;
+    margin-left: 0;
+    font-size: 15px;
+    font-size: 13px; /* design :/ */
+    /* line-height: 23px; */
+    /* .widget-match-detail */
+    /* font-family: "SRG_SSR_Light", Arial, Helvetica, Verdana, sans-serif;
+    color: #222;
+    font-weight: 700;
+    margin-left: 0;
+    font-size: 18px; */
+}
+
+@media screen and (max-width:639px) {
+    .panel-body .venue {
+        /* height: 51px; */
+    }
+    .panel-primary.widget-match-detail .venue {
+        margin: 0;
+    }
+    .panel-primary.widget-match-detail .venue,
+    .panel-primary.widget-match-detail .venue span {
+        font-size: 15px;
+        line-height: 21px;
+        font-weight: 400;
+    }
+}
+@media screen and (min-width:640px) {
+    .panel-body .venue {
+        margin-bottom: 8px;
+    }
+    /* making a button go to the next line ... VERY SKETCHY!! */
+    .panel-body .venue span:nth-last-child(0) /* .panel-body .venue span:nth-last-child(2) */ {
+        /* margin-right: 30%; */
+    }
+    .panel-body .venue span:nth-last-child(0)::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .panel-primary.widget-match-detail .venue {
+        text-align: center;
+    }
+    .panel-primary.widget-match-detail .venue span {
+        /* font-size: 16px; */
+    }
+}
+
+/* end venue stuff ... */
+
+
+/* dropdown detail page */
+/* overwrite */
+.panel-primary .panel-mobile-heading {
+    background: transparent;
+    margin: 8px 0 16px;
+}
+
+@media screen and (min-width:640px) {
+    .panel-primary .panel-mobile-heading,
+    .panel-primary > .panel-heading.schedule-options {
+        height: 87px;
+    }
+}
+
+.phase-navigation .dropdown .dropdown-toggle { /* a => mobile only!! BEWARE!!! */
+    margin: 0; /* 0 0 8px 0; */
+    padding: 6px 16px; /* padding: 12px 0; */
+    min-width: 200px;
+    display: block;
+    position: relative;
+    text-align: left;
+
+    background: linear-gradient(#ebebe5, #d8d6ca);
+    border-radius: 2px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d3d3ce #c3c1b6 #c3c1b6;
+}
+
+@media screen and (min-width:640px) {
+    /* .phase-navigation .dropdown, /* resultcenter */
+    .phase-navigation .dropdown .dropdown-toggle, /* dropdown a */
+    .phase-navigation .dropdown .dropdown-menu { /* dropdown ul */
+        width: 200px;
+    }
+    .phase-navigation .subphaseList.dropdown .dropdown-toggle,
+    .phase-navigation .subphaseList .dropdown-toggle {
+        /* padding: 6px 8px; */ /* next "solution" (hack :/) is better! */
+    }
+    .phase-navigation .small .dropdown-toggle span:first-child {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-block;
+        max-width: 166px;
+    }
+}
+
+@media screen and (max-width:639px) {
+    .phase-navigation .dropdown, /* dropdown a */
+    .phase-navigation .dropdown .dropdown-toggle, /* dropdown a */
+    .phase-navigation .dropdown .dropdown-menu { /* dropdown ul */
+        width: 100%;
+    }
+    .panel .mobile-heading .dropdown-menu { /* overwrite */
+        left: 0;
+        margin-left: 0;
+        margin-top: -1px;
+    }
+    .phase-navigation .dropdown .dropdown-toggle {
+        height: 48px;
+        padding: 12px 16px;
+    }
+}
+
+.panel .mobile-heading .dropdown .dropdown-toggle span,
+.phase-navigation .dropdown .dropdown-toggle span {
+    font: 15px/21px "SRG_SSR_Medium", sans-serif;
+    color: #555;
+}
+.phase-navigation .dropdown.open .dropdown-toggle span,
+.phase-navigation .dropdown .dropdown-toggle:hover span {
+    color: #222;
+}
+
+/* .phaselist-menu, /* ul */
+.phaselist-menu.dropdown-menu,
+.dropdownFilter .dropdown-menu {
+    background-color: #f5f5f2; /* #ebebe5; */
+    margin-top: 0;
+    padding: 0; /* 1px 0; */
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.4);
+    width: 240px;
+}
+
+/* .phaselist-menu .pl_item, */
+.phaselist-menu.dropdown-menu .pl_item,
+.phaselist-menu.dropdown-menu .anchor, /* no more anchor? */
+.dropdownFilter .dropdown-menu .anchor {
+    font: 15px/21px "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif !important;
+    color: #555;
+    padding: 13px 16px;
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    white-space: normal;
+    margin-left: 0;
+}
+
+/* .phaselist-menu .pl_item:hover, */
+.phaselist-menu .pl_item:hover,
+.phaselist-menu.dropdown-menu .pl_item:hover,
+.phaselist-menu.dropdown-menu .anchor:hover ,
+.dropdownFilter .dropdown-menu .anchor:hover {
+    background-color: #ebebe5; /* #dadad2; */
+    color: #222;
+}
+
+.phaselist-menu .pl_item.active,
+.phaselist-menu.dropdown-menu .pl_item.active {
+    font-weight: 400;
+}
+
+/* .phaselist-menu .list-item:last-child, */
+.phaselist-menu.dropdown-menu .list-item:last-child,
+.phaselist-menu.dropdown-menu .list-item:last-child .anchor,
+.phaselist-menu.dropdown-menu .pl_item:last-child,
+.phaselist-menu.dropdown-menu .pl_item:last-child .anchor,
+.dropdownFilter .dropdown-menu .list-item:last-child .anchor {
+    border-bottom: 0;
+}
+
+/* desktop is not working at the moment :/  ===> desperate attempts follow ... */
+
+@media screen and (min-width:640px) {
+    .phaselist-menu.dropdown-menu {
+        left: -17px;
+        top: 28px;
+    }
+    /* removing padding from "no button" */
+    .phaselist.medium ul:not(.dropdown-menu) > li:first-child, /* overwrite*/
+    .phaselist-menu:not(.dropdown-menu) > .pl_item {
+        margin: 16px 4px;
+        margin: 8px 4px;
+        /* min-width: 200px; */
+        min-width: 100px; /* s. flexbox below */
+    }
+    .phaselist-menu:not(.dropdown-menu) > .pl_item:last-child {
+        margin-right: 0;
+    }
+    /* removing padding from "no button" */
+    .phaselist-menu:not(.dropdown-menu) > .pl_item .dropdown-toggle {
+        margin: -7px -17px;
+        text-align: left;
+    }
+    .phaselist-menu:not(.dropdown-menu) > .pl_item.active {
+        /* display: none; */
+        /* opacity: .48; */
+        background-color: #dadad2;
+        background-image: none;
+        color: #222;
+    }
+}
+
+/* end dropdown second page ... */
+
+/* glyphicon custom */
+.phase-navigation .glyphicon-chevron-down::before,
+.dropdownFilter .glyphicon-chevron-down::before {
+    content: none;
+}
+
+.phase-navigation .glyphicon-chevron-down,
+.dropdownFilter .glyphicon-chevron-down {
+    background: url(img/small_triangle.svg);
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    right: 16px;
+    top: 50% !important;
+    transform: translate(0, -50%);
+    opacity: .6;
+}
+@media screen and (min-width:640px) {
+    .subphaseList .dropdown-toggle .glyphicon-chevron-down { /* detailpage, zB. ski jump */
+        right: 16px; /* 0; */
+    }
+}
+@media screen and (max-width:639px) {
+    .phase-navigation .glyphicon-chevron-down,
+    .dropdownFilter .glyphicon-chevron-down {
+        right: 25px;
+    }
+}
+
+.phase-navigation .dropdown.open .dropdown-toggle span .glyphicon-chevron-down,
+.phase-navigation .small .dropdown-toggle:hover .glyphicon-chevron-down,
+.dropdownFilter .dropdown-toggle:hover .glyphicon-chevron-down {
+    opacity: 1;
+}
+/* end glyphicon custom */
+
+/* nav tabs as button (no icon) */
+
+/* overwrite */
+.widget-results-detail .navtab-container .navtab-top-left {
+    padding: 0;
+    border-top: 0;
+    overflow-x: initial;
+}
+
+.navtab-top-left .nav-tabs {
+    padding: 0;
+}
+.navtab-top-left .nav-tabs li.active {
+    /* display: none; */ /* startliste | ergebnisse */
+    /* opacity: .48; */
+}
+.navtab-top-left .nav-tabs {
+    margin: 0 -4px; /* HACK!! */
+}
+.navtab-top-left .nav-tabs li.active > a,
+.navtab-top-left .nav-tabs li.active > a:hover,
+.navtab-top-left .nav-tabs li.active > a:visited,
+.navtab-top-left .nav-tabs li.active > a:active,
+.navtab-top-left .nav-tabs li.active > a:focus {
+    border: 1px solid #e3e3e7;
+    border-color: #d3d3ce #c3c1b6 #c3c1b6 !important;
+    background-image: none !important;
+    background-color: #dadad2 !important;
+}
+.navtab-top-left .nav-tabs li.active > a .format-local {
+    color: #222;
+}
+
+.navtab-top-left .nav-tabs li.tab {
+    border-right: 0;
+}
+/* .navtab-top-left .nav-tabs li.tab:not(:last-of-type) { margin-right: 8px; } */
+@media screen and (min-width:506px) and (max-width:639px) {
+    /* three items */ /* startliste | ergebnisse (live) <- biathlon m 10km sprint */
+    .navtab-top-left .nav-tabs li.tab:first-child:nth-last-child(3), /* setup above ... */
+    .navtab-top-left .nav-tabs li.tab:first-child:nth-last-child(3) ~ li {
+        width: calc(33.33% - 8px);
+    }
+}
+@media screen and (min-width:506px) {
+    .navtab-top-left .nav-tabs li.tab {
+        margin: 0 4px; /* margin-right: 16px; */
+        width: 200px;
+    }
+}
+@media screen and (max-width:505px) {
+    .navtab-top-left .nav-tabs {
+        margin: 0 -4px; /* HACK!! */
+    }
+
+    .navtab-top-left .nav-tabs li.tab {
+        /* max-width: 200px; */
+        width: calc(50% - 8px); /* HACK!! */
+        margin: 0 4px;
+    }
+    .navtab-top-left .nav-tabs li.tab a {
+        min-width: 100px !important;
+        display: block !important;
+    }
+    .navtab-container .result-status {
+        display: none;
+    }
+    .navtab-top-left .nav-tabs li.tab:last-child:nth-child(3) {
+        margin-top: -6px; /* it's design! */
+    }
+}
+
+/* detailpage zB. startliste | ergebnisse ... */
+.navtab-top-left .nav-tabs li a { /* link */
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif;
+    border: 1px solid #e3e3e7;
+    border-color: #d3d3ce #c3c1b6 #c3c1b6;
+    background-image: linear-gradient(to bottom, #f5f5f2 0%, #e2e0d7 100%);
+    border-radius: 2px;
+    padding: 6px 16px;
+    text-align: center;
+    height: auto;
+}
+
+@media screen and (max-width:639px) {
+    .navtab-top-left .nav-tabs li a { /* link */
+        margin: 16px 0;
+        margin: 16px 0 0;
+    }
+    .result-status.multiple-phases .navtab-top-left .nav-tabs li a {}
+}
+
+/* overwrite :/ */
+.widget-match-detail .navtab-container .navtab-top-left .nav-tabs li.active,
+.widget-match-detail .navtab-container .navtab-top-left .nav-tabs li.active:hover {
+    border: 0;
+}
+.widget-match-detail .navtab-container .navtab-top-left .nav-tabs li.active a {
+    padding: 6px 16px;
+}
+
+/* only buttons (not dropdowns) */
+.phaselist-menu:not(.dropdown-menu) > .pl_item:not(.active):hover,
+.navtab-top-left .nav-tabs li a:hover { /* link */
+    background-color: #dadad2;
+    background-image: none;
+}
+
+.navtab-top-left .nav-tabs li a .format-local { /* font */
+    font-size: 13px;
+    font-weight: 400;
+    color: #555; /* #8c8e96; */
+    line-height: 21px;
+}
+
+/* end nav tabs as button (no icon) */
+
+
+/* LIVE icon (and others :/) */
+.widget-results-detail .navtab-container {
+    margin: 16px 0;
+}
+.widget-results-detail .navtab-container .result-status {
+    background: #ffa800; /* sportgelb */
+    color: #222;
+    font-size: 13px;
+    top: auto;
+    right: 0;
+    bottom: 0; /* 16px; /* <--- ????? */
+}
+
+.resultDetailProgressBar ~ .navtab-container .result-status,
+.widget-results-detail .widget-result-detail-current-view + .navtab-container .result-status,
+.widget-results-detail .results-detail-next + .navtab-container .result-status {
+    background-color: #e31f2b; /* <-- only for live :/ */
+    color: #fff;
+    text-transform: uppercase;
+}
+.panel-body + .navtab-container .result-status,
+.widget-results-detail .navtab-container .result-status.multiple-phases {
+    background: #ffa800; /* sportgelb */
+    color: #222;
+}
+
+@media screen and (max-width:639px) {
+    .widget-results-detail .navtab-container {
+        margin: 0 0 16px 0;
+        margin: 0 0 24px 0;
+    }
+    .widget-results-detail .navtab-container .result-status {
+        /* bottom: 16px; *//* why? */
+    }
+}
+
+.widget-results-detail .navtab-container .result-status span,
+.widget-results-detail .navtab-container .result-status.multiple-phases span {
+    font-family: "SRG_SSR_Medium", sans-serif;
+    font-size: 13px;
+    padding: 6px 16px;
+}
+.widget-results-detail .navtab-container .result-status.multiple-phases span {
+    text-transform: uppercase;
+}
+
+.results-detail-next {
+    margin: 16px 0;
+    background-color: #f5f5f2;
+}
+@media screen and (min-width:640px) {
+    .results-detail-next {
+        padding: 5px 0;
+    }
+}
+
+.widget-results-detail .results-detail-next .content-container::after,
+.widget-results-detail .results-detail-next .content-container::before {
+    border: 0;
+}
+
+.widget-results-detail .results-detail-next .content-container > span,
+.widget-results-detail .results-detail-next .content-container .bib,
+.widget-results-detail .results-detail-next .content-container .participant-list span,
+.widget-results-detail .results-detail-next .content-container .pilot span {
+    color: #555;
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif;
+}
+@media screen and (min-width:640px) {
+    .widget-results-detail .results-detail-next .content-container > span,
+    .widget-results-detail .results-detail-next .content-container .bib,
+    .widget-results-detail .results-detail-next .content-container .participant-list span,
+    .widget-results-detail .results-detail-next .content-container .pilot span {
+        font-size: 15px !important;
+    }
+}
+@media screen and (max-width:639px) {
+    .widget-results-detail .results-detail-next .content-container .participant-list span,
+    .widget-results-detail .results-detail-next .content-container .pilot span,
+    .widget-results-detail .results-detail-next .content-container .bib {
+        font-size: 14px;
+    }
+    .widget-results-detail .results-detail-next .content-container .bib {
+        padding: 12px 4px;
+    }
+}
+.widget-results-detail .results-detail-next .content-container .participant-list,
+.widget-results-detail .results-detail-next .content-container .pilot {
+    display: block;
+    padding: 12px 6px 0 4px;
+    margin: 0;
+}
+
+/* toggle */
+.panel-body .legend-toggle,
+.panel-body .course-toggle {
+    border: 1px solid #e3e3e7;
+    background-image: linear-gradient(to bottom, #f5f5f2 0%, #e2e0d7 100%);
+    border-radius: 2px;
+    font: 15px/21px "SRG_SSR_Medium", sans-serif; /* + */
+    color: #555;
+    margin: 16px 0 0;
+    padding: 6px 16px;
+    border-color: #d3d3ce #c3c1b6 #c3c1b6;
+    min-width: 200px;
+    text-align: center;
+    display: inline-block;
+}
+.panel-body .course-toggle {
+    position: initial; /* goes with the crazy .venue-hack :/ */
+}
+@media screen and (max-width:639px) {
+    .panel-body .course-toggle {
+        position: initial;
+    }
+}
+
+.panel-body .legend-toggle:hover,
+.panel-body .course-toggle:hover {
+    background-color: #dadad2; /* #f5f5f2; <-- huebscher!! */
+    background-image: none;
+    color: #222;  /* + */
+}
+
+/* only buttons (not dropdowns) */
+.phaselist-menu:not(.dropdown-menu) > .pl_item,
+    /* .phaselist-menu:not(.dropdown-menu) > .pl_item.active, /* :/ */
+.panel-body .legend-toggle .format-local,
+.panel-body .course-toggle .format-local {
+    font: 15px/21px "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif !important;
+    font-weight: 400 !important;
+    color: #555;
+    text-align: center !important;
+}
+
+/* only buttons (not dropdowns) */
+.phaselist-menu:not(.dropdown-menu) > .pl_item:not(.active):hover,
+.panel-body .legend-toggle:hover .format-local,
+.panel-body .course-toggle:hover .format-local {
+    color: #222;
+}
+
+/*** can't be changed ...
+button.toggle-button,
+.show-more-or-less-buttons .icon-chevron-up,
+.show-more-or-less-buttons .icon-chevron-down {
+    background: url(img/arrow_right.svg) no-repeat;
+    background-size: 20px;
+    width: 14px;
+    height: 20px;
+    display: inline-block;
+    opacity: .7;
+}
+button.toggle-button-unchecked,
+.show-more-or-less-buttons .icon-chevron-down {
+    background-position: 2px;
+    transform: rotate(90deg);
+}
+
+button.toggle-button.toggle-button-checked,
+.show-more-or-less-buttons .icon-chevron-up {
+    background-position: 0;
+    transform: rotate(270deg);
+}
+
+button.toggle-button:hover,
+.show-more-or-less-buttons .btn:hover .icon-chevron-down,
+.show-more-or-less-buttons .btn:hover .icon-chevron-up {
+    opacity: 1;
+}
+
+button.toggle-button::before,
+.show-more-or-less-buttons .icon-chevron-down::before,
+.show-more-or-less-buttons .icon-chevron-up::before {
+    content: "";
+    border: 0 !important;
+}
+***/
+
+/* course data ... */
+.results-detail-course-view .course-container {
+    margin: 8px 0;
+    padding: 0;
+}
+@media screen and (max-width:400px) {
+    .results-detail-course-view .course-container .course-data-wrapper .course-data {
+        width: 100%;
+    }
+}
+
+
+.results-detail-course-view .course-container .course-data-wrapper .course-data .course-header {
+    font: 15px/25px "SRG_SSR_Regular", Arial, Helvetica, Verdana, sans-serif !important;
+    font-weight: 400;
+}
+
+.results-detail-course-view .course-container .course-data-wrapper .course-data .course-value {
+    font: 15px/21px "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif !important;
+}
+.results-detail-course-view .course-container .course-data-wrapper .course-data .course-header,
+.results-detail-course-view .course-container .course-data-wrapper .course-data .course-value {
+    color: #555;
+}
+/* end course data */
+
+/* zwischenwertung */
+.resultsDetailIntermediatePhases h5 {
+    font: 15px/21px "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif;
+    color: #555;
+    margin: 0;
+}
+.resultsDetailIntermediatePhases h5 { /* titel? */
+    font: 20px/36px "SRG_SSR_Regular", Arial, Helvetica, Verdana, sans-serif !important;
+    color: #555;
+    border-bottom: 1px solid #969696;
+    font-weight: 400;
+}
+.resultsDetailIntermediatePhases {
+    padding-left: 0;
+}
+.resultsDetailIntermediatePhases ul:not(.loop-block),
+.resultsDetailIntermediatePhases .intermediate-container {
+    margin-top: 8px;
+}
+.resultsDetailIntermediatePhases .intermediate span,
+.resultsDetailIntermediatePhases ul li {
+    font-size: 14px; /* 15px */
+    line-height: 21px;
+    color: #555;
+}
+
+/* progress bar */
+.widget-results-detail div.resultDetailProgressBar .progressBar {
+    width: 300px;
+    max-width: 300px;
+    margin: 0;
+    height: 16px;
+    background: #f5f5f2;
+}
+div.resultDetailProgressBar {
+    margin-left: 0;
+}
+
+div.resultDetailProgressBar .progress-label {
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #555;
+    margin-right: 8px;
+    margin-top: 16px;
+}
+
+@media screen and (max-width:639px) {
+    div.resultDetailProgressBar {
+        margin: 0 0 8px;
+        margin: 0;
+    }
+    div.resultDetailProgressBar .progress-label {
+        margin: 16px 8px 4px 0;
+    }
+    div.resultDetailProgressBar .progressBar {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .widget-results-detail div.resultDetailProgressBar .progressBar {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+@media screen and (min-width:399px) {
+    .widget-results-detail div.resultDetailProgressBar .progressBar {
+        margin-bottom: -3px;
+    }
+}
+.progressBar__progress {
+    background-color: #ffa800;
+}
+
+.results-small .header {
+    font-size: 15px;
+    line-height: 28px;
+    color: #555;
+    margin: 0 8px 0 0;
+    display: inline-block;
+}
+.results-small .result {
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif;
+    font-size: 16px;
+    color: #555;
+    display: inline-block;
+}
+
+@media screen and (max-width:639px) {
+    .widget-results-detail .results-detail-next {
+        margin: 16px 0 0;
+        background-color: #f5f5f2;
+    }
+    .widget-results-detail .results-detail-next .content-container {
+        float: none;
+        margin-left: 0;
+        margin-top: 6px;
+    }
+}
+
+/* eiskunstlauf mixed | ski jump expand... */
+.main-list-expanded-area .tableHeaders, /* check back ski jump! */
+.main-list-expanded-area .tableScores,
+.main-list-expanded-area .FSKDetailsMusicLabel,
+.main-list-expanded-area .tableScores {
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif;
+    color: #555;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+}
+.main-list-expanded-area .FSKDetailsMusicLabel, /* eiskunstlauf*/
+.main-list-expanded-area .tableHeaders { /* ski jump */
+    padding: 12px 0 8px;
+}
+.main-list-expanded-area .tableScores {
+    padding: 8px 0;
+}
+.main-list-expanded-area .tableScores:last-of-type {
+    margin-bottom: 16px;
+}
+@media screen and (max-width:640px) {
+    .main-list-expanded-area .FSKDetailsMusicLabel {
+        padding: 0 0 8px;
+    }
+    .main-list-expanded-area .tableScores:last-of-type {
+        margin-bottom: 8px;
+    }
+}
+.main-list-expanded-area .FSKDetailsTables .table,
+.main-list-expanded-area .FRSDetailsTables .table {
+    margin-top: 8px;
+}
+@media screen and (min-width:640px) {
+    .main-list-expanded-area .tableScores + .main-list-expanded-area-table .table {
+        /* margin-top: 0; */
+    }
+}
+
+.main-list-expanded-area .main-list-expanded-area-table + .tableScores,
+.main-list-expanded-area .SJPNCBDetailsTables + .tableScores {
+    padding: 0 0 8px;
+}
+
+/* medals */
+.table tbody tr.tablerow td.gender-event-phase .medal-box { /* curling | hockey */
+    border-color: #555;
+}
+@media screen and (min-width:640px) {
+    .table tbody tr.tablerow td.gender-event-phase .medal-box { /* curling | hockey */
+        top: 20px;
+    }
+}
+
+@media screen and (min-width:640px) {
+    .table tbody tr.tablerow td.gender-event-phase .medal-box { /* curling | hockey */
+        right: 8px;
+    }
+}
+.medal-box span.icon-medal {
+    color: #555;
+}
+
+.medal-box.medal,
+.medal-box.medal-box-gold,
+.medal-box.medal-box-silver,
+.medal-box.medal-box-bronze {
+    border: 1px solid #fff;
+}
+
+/* curling | hockey table content */
+.table tbody tr.tablerow td.gender-event-phase .gender-event {
+    font-weight: 400;
+}
+.table tbody tr.tablerow td.gender-event-phase .phase {
+    font-family: "SRG_SSR_Light", Arial, Helvetica, Verdana, sans-serif;
+}
+.table tbody tr.tablerow td.gender-event-phase .gender-event,
+.table tbody tr.tablerow td.gender-event-phase .phase {
+    font-size: 14px !important;
+    line-height: 25px;
+}
+
+/* info ? no data available */
+.tab-content > .tab-pane.active:not(:empty) > .format-local {
+    font-family: "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif;
+    display: block;
+    color: #555;
+    font-size: 13px;
+    background: #f5f5f2;
+    padding: 8px;
+    margin: 8px 0;
+}
+
+
+
+/* flexbox ! (list items / dropdown ... detailpage) */
+@media screen and (min-width:640px) {
+    .phaselist.medium .phaselist-menu:not(.dropdown-menu) {
+        list-style-type: none;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        justify-content: flex-start;
+        align-content: stretch;
+        width: 100vw;
+        width: calc(100% + 4px);
+        margin: 0 -4px;
+        padding: 0;
+    }
+    .phaselist-menu:not(.dropdown-menu) > .pl_item {
+        flex: 1;
+        flex-basis: 200px;
+        min-width: 100px;
+        max-width: 200px;
+        float: none !important;
+    }
+}
+
+.panel-body.widget-result-detail-mainstandings-view .table tr.tablerow.secondaryInfoTableRow td,
+.panel-body.widget-result-detail-mainstandings-view .table tbody tr td.TriCodeFlagColumn {
+    padding: 8px !important;
+}
