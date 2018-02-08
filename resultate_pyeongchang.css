@@ -2371,6 +2371,11 @@ button.toggle-button:hover {
     border-top: 0;
     overflow-x: initial;
 }
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .widget-results-detail .navtab-container .navtab-top-left {
+        overflow-x: hidden;
+    }
+}
 
 .navtab-top-left .nav-tabs {
     padding: 0;
