@@ -661,6 +661,10 @@ button.toggle-button::before {}
     border-color: #d3d3ce #c3c1b6 #c3c1b6;
 }
 
+.show-more-or-less-buttons .btn {
+    width: 190px;
+}
+
 .btn:active, .btn:focus, .btn:hover,
 .show-more-or-less-buttons .btn:active,
 .show-more-or-less-buttons .btn:focus,
