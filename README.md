@@ -1,2 +1,2 @@
 # olympia-css
-Custom CSS for olympia widgets
+Custom CSS for olympia widgets from gracenote
