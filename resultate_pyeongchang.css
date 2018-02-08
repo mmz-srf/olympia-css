@@ -445,6 +445,9 @@ table tbody tr th { /* "untertitel" */
         font-size: 12px !important;
         white-space: nowrap;
     }
+    .widget-standing .table tbody tr.tablerow td.date-time-broadcast.date > span {
+        display: inline-block;
+    }
     .table tbody td.date span {
         min-width: 38px;
     }
@@ -517,6 +520,7 @@ table tbody tr th { /* "untertitel" */
     .widget-standing .panel-group .panel .panel-collapse .panel-body .tablerow .tablecell.date-time .date span,
     .widget-standing .panel-group .panel .panel-collapse .panel-body .tablerow .tablecell.date-time .time span {
         color: #646464;
+        vertical-align: middle;
     }
 }
 
