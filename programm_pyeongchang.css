@@ -4189,3 +4189,7 @@ li:first-child:nth-last-child(2) ~ li {
 .panel-body.widget-result-detail-mainstandings-view .table tbody tr td.TriCodeFlagColumn {
     padding: 8px !important;
 }
+
+.hoidulidu {
+    display: none !important;
+}

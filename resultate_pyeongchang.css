@@ -513,6 +513,7 @@ table tbody tr th { /* "untertitel" */
     }
     .widget-standing .panel-group .panel .panel-collapse .panel-body .tablerow td.date-time > div {
         padding: 0;
+        height: auto;
     }
     .widget-standing .table tbody tr.tablerow td.date-time > div .time {
         margin-left: 10px; /* overwrite */
