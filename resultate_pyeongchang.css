@@ -486,7 +486,7 @@ table tbody tr th { /* "untertitel" */
 
 /* sketchy!!! trying to resize table cells */
 .widget-result-detail-mainlist-view .table tbody .tablerow .NumericColumn:first-child {
-    width: 30px;
+    max-width: 30px;
 }
 .widget-result-detail-mainlist-view .table tbody .tablerow .ParticipantColumn {
     width: auto;
