@@ -491,6 +491,9 @@ table tbody tr th { /* "untertitel" */
 .widget-result-detail-mainlist-view .table tbody .tablerow .ParticipantColumn {
     width: auto;
 }
+.widget-result-detail-preview-view .table th {
+    text-align: left; /* so hopefully the name is always left :/*/
+}
 
 .widget-standing .table tbody.tablesection .tablerow .tablecell.competitors,
 .widget-standing .table tbody tr.tablerow td.competitors { /* detailpage curling mobile second row */
@@ -915,7 +918,7 @@ button.toggle-button:hover {
     }
     .widget-result-detail-preview-view .table tbody tr td.countryFlag {
         /* height: 50px; */
-        min-width: 40px;
+        min-width: 34px;
         padding: 8px !important; /*padding: 0 4px;*/
         text-align: center;
     }
