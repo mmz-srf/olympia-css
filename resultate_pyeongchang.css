@@ -485,10 +485,12 @@ table tbody tr th { /* "untertitel" */
 }
 
 /* sketchy!!! trying to resize table cells */
+.widget-result-detail-mainstandings-view .table tbody.tablesection .tablerow .NumericColumn:first-child,
 .widget-result-detail-startlist-view .table tbody.tablesection .tablerow .NumericColumn:first-child,
 .widget-result-detail-mainlist-view .table tbody .tablerow .NumericColumn:first-child {
     width: 30px;
 }
+.panel-body.widget-result-detail-mainstandings-view .table tbody tr td.ParticipantColumn,
 .widget-result-detail-startlist-view .table tbody .tablerow .ParticipantColumn,
 .panel-body.widget-result-detail-startlist-view .ParticipantColumn,
 .panel-body.widget-result-detail-mainlist-view .ParticipantColumn,
@@ -999,7 +1001,7 @@ button.toggle-button:hover {
     border-bottom: 0;
 }
 .panel-body.widget-result-detail-mainstandings-view .table tbody tr td.ParticipantColumn {
-    width: 45%;
+    /* width: 45%; */
 }
 .panel-body.widget-result-detail-mainstandings-view .mainResult span,
 .panel-body.widget-result-detail-mainstandings-view .ParticipantColumn span,
