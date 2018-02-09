@@ -89,7 +89,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-widget-resultsoverview .panel-heading .open .dropdown-menu {
+.widget-resultsoverview .panel-heading .open .dropdown-menu {
     max-height: 80vh;
 }
 
