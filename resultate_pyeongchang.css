@@ -89,6 +89,10 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+widget-resultsoverview .panel-heading .open .dropdown-menu {
+    max-height: 80vh;
+}
+
 /* detail page title ----> */
 .widget-standing .panel-heading .sport, /* curling detail */
 .widget-results-detail .panel-heading .sport, /* lists ... */
@@ -478,6 +482,14 @@ table tbody tr th { /* "untertitel" */
     border-top: 2px solid #fff;
     /* border-bottom: 1px solid rgba(0,0,0,.15); /* #d3d3cd; */
     border-bottom: 0 !important; /* <-- no links, probably */
+}
+
+/* sketchy!!! trying to resize table cells */
+.widget-result-detail-mainlist-view .table tbody .tablerow .NumericColumn:first-child {
+    width: 30px;
+}
+.widget-result-detail-mainlist-view .table tbody .tablerow .ParticipantColumn {
+    width: auto;
 }
 
 .widget-standing .table tbody.tablesection .tablerow .tablecell.competitors,
