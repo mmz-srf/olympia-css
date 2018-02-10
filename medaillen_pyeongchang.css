@@ -370,6 +370,10 @@ table tbody tr th { /* "untertitel" */
     .table tbody tr.tablerow:not(.country-row):not(.expand-area) td {
         border-top: 0; /* border-top mobile */
     }
+    .table thead tr th.participant,
+    .table tbody tr td.medal.medal-header {
+        padding-left: 0;
+    }
 }
 
 .tablecell.sortable .format-local,
