@@ -485,11 +485,13 @@ table tbody tr th { /* "untertitel" */
 }
 
 /* sketchy!!! trying to resize table cells */
+.widget-standing .table tbody.tablesection .tablerow .rankColumn:first-child, /* curling second table */
 .widget-result-detail-mainstandings-view .table tbody.tablesection .tablerow .NumericColumn:first-child, /* gesamttabelle */
 .widget-result-detail-startlist-view .table tbody.tablesection .tablerow .NumericColumn:first-child, /* startliste */
 .widget-result-detail-mainlist-view .table tbody .tablerow .NumericColumn:first-child { /* ergebnisse */
     width: 30px;
 }
+.widget-standing .table tbody.tablesection .tablerow .participantColumn, /* curling second table */
 .panel-body.widget-result-detail-mainstandings-view .table tbody tr td.ParticipantColumn,/* gesamttabelle */
 .widget-result-detail-startlist-view .table tbody .tablerow .ParticipantColumn, /* startliste */
 .panel-body.widget-result-detail-startlist-view .ParticipantColumn, /* startliste */
@@ -501,6 +503,9 @@ table tbody tr th { /* "untertitel" */
     text-align: left; /* so hopefully the name is always left :/*/
 }
 
+.widget-standing .tablecell.date-time .line:empty, .widget-standing .tablecell.date-time .timezone:empty {
+    display: none;
+}
 .widget-standing .table tbody.tablesection .tablerow .tablecell.competitors,
 .widget-standing .table tbody tr.tablerow td.competitors { /* detailpage curling mobile second row */
     padding: 4px 8px 4px 16px !important;
@@ -530,14 +535,14 @@ table tbody tr th { /* "untertitel" */
     }
     .widget-standing .panel-group .panel .panel-collapse .panel-body .tablerow .tablecell.date-time {
         background-color: #ebebe5;
-        width: 70px;
+        width: 64px;
     }
     .widget-standing .panel-group .panel .panel-collapse .panel-body .tablerow td.date-time > div {
         padding: 0;
         height: auto;
     }
     .widget-standing .table tbody tr.tablerow td.date-time > div .time {
-        margin-left: 10px; /* overwrite */
+        margin-left: 8px; /* overwrite */
     }
     .widget-standing .panel-group .panel .panel-collapse .panel-body .tablerow .tablecell.date-time .date span,
     .widget-standing .panel-group .panel .panel-collapse .panel-body .tablerow .tablecell.date-time .time span {
