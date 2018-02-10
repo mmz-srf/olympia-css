@@ -485,16 +485,16 @@ table tbody tr th { /* "untertitel" */
 }
 
 /* sketchy!!! trying to resize table cells */
-.widget-result-detail-mainstandings-view .table tbody.tablesection .tablerow .NumericColumn:first-child,
-.widget-result-detail-startlist-view .table tbody.tablesection .tablerow .NumericColumn:first-child,
-.widget-result-detail-mainlist-view .table tbody .tablerow .NumericColumn:first-child {
+.widget-result-detail-mainstandings-view .table tbody.tablesection .tablerow .NumericColumn:first-child, /* gesamttabelle */
+.widget-result-detail-startlist-view .table tbody.tablesection .tablerow .NumericColumn:first-child, /* startliste */
+.widget-result-detail-mainlist-view .table tbody .tablerow .NumericColumn:first-child { /* ergebnisse */
     width: 30px;
 }
-.panel-body.widget-result-detail-mainstandings-view .table tbody tr td.ParticipantColumn,
-.widget-result-detail-startlist-view .table tbody .tablerow .ParticipantColumn,
-.panel-body.widget-result-detail-startlist-view .ParticipantColumn,
-.panel-body.widget-result-detail-mainlist-view .ParticipantColumn,
-.widget-result-detail-mainlist-view .table tbody .tablerow .ParticipantColumn {
+.panel-body.widget-result-detail-mainstandings-view .table tbody tr td.ParticipantColumn,/* gesamttabelle */
+.widget-result-detail-startlist-view .table tbody .tablerow .ParticipantColumn, /* startliste */
+.panel-body.widget-result-detail-startlist-view .ParticipantColumn, /* startliste */
+.panel-body.widget-result-detail-mainlist-view .ParticipantColumn, /* ergebnisse */
+.widget-result-detail-mainlist-view .table tbody .tablerow .ParticipantColumn { /* ergebnisse */
     width: auto;
 }
 .widget-result-detail-preview-view .table th {
@@ -2744,6 +2744,14 @@ button.toggle-button::before,
     font-size: 14px; /* 15px */
     line-height: 21px;
     color: #555;
+}
+
+.resultsDetailIntermediatePhases h5 ~ ul li .intermediate span { /* langlauf (zwischenwertung) links */
+    color: #e31f2b;
+    text-decoration: underline;
+}
+.resultsDetailIntermediatePhases h5 ~ ul li .intermediate:hover span { /* langlauf (zwischenwertung) links */
+    color: #c91024;
 }
 
 .resultsDetailIntermediatePhases .loop-block { /* ul */
