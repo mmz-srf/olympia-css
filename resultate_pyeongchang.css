@@ -2807,6 +2807,10 @@ button.toggle-button::before,
     .resultsDetailIntermediatePhases .loop-block {
         margin-bottom: 8px;
     }
+    .resultsDetailIntermediatePhases .loop-block .intermediate:first-child:nth-last-child(3),
+    .resultsDetailIntermediatePhases .loop-block .intermediate:first-child:nth-last-child(3) ~ .intermediate {
+        width: 33.33%;
+    }
 }
 
 /* progress bar */
