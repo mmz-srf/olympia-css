@@ -2746,10 +2746,16 @@ button.toggle-button::before,
     color: #555;
 }
 
+.resultsDetailIntermediatePhases h5 ~ ul li .intermediate {
+    margin-right: 0; /* overwriting (original: margin-right: 10; <-- omg!) */
+}
+
 .resultsDetailIntermediatePhases h5 ~ ul li .intermediate span { /* langlauf (zwischenwertung) links */
     color: #e31f2b;
     text-decoration: underline;
+    padding: 4px 12px 4px 0;
 }
+
 .resultsDetailIntermediatePhases h5 ~ ul li .intermediate:hover span { /* langlauf (zwischenwertung) links */
     color: #c91024;
 }
