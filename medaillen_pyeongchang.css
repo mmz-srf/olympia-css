@@ -294,9 +294,11 @@ table tbody tr th { /* "untertitel" */
     .table tbody td span {
         font-size: 15px;
     }
-
     .table tbody tr.expand-area td .medal-table-expanded-view > div > .format-local {
         font-size: 13px; /* no data :/ */
+    }
+    .table thead tr th.rank:first-child {
+        padding-left: 8px;
     }
 }
 
