@@ -300,6 +300,13 @@ table tbody tr th { /* "untertitel" */
     .table thead tr th.rank:first-child {
         padding-left: 8px;
     }
+    .table thead tr th.participant,
+    .table tbody tr td.participant {
+        padding-left: 0;
+    }
+    .medal-table-expanded-view .expansion-data .sport-wrapper .medallists .medal-header {
+        margin: 8px 0;
+    }
 }
 
 .table tbody tr.tablerow td { /* content */
