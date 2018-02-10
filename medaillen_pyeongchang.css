@@ -249,9 +249,14 @@ table tbody tr th { /* "untertitel" */
 
 .table tbody tr td.medal:not(.medal-header), .table tbody tr th.medal,
     /* .table tbody tr td.medal, .table tbody tr th.medal, */
-.table thead tr td.medal, .table thead tr th.medal {
+.table thead tr td.medal,
+.table thead tr th.medal {
     /* min-width: 54px; */
     width: auto;
+    width: 12%;
+}
+.table thead tr th.rank {
+    width: 6%;
 }
 .medal-table-expanded-view .expansion-data .sport-wrapper:last-of-type {
     margin-bottom: 16px;
@@ -273,6 +278,9 @@ table tbody tr th { /* "untertitel" */
 .table tbody tr td:last-child, .table tbody tr th:last-child,
 .table thead tr td:last-child, .table thead tr th:last-child {
     width: 15px; /* here below ist the arrow :/ */
+}
+.table tbody tr td:last-child {
+    padding: 0 8px 0 0 !important;
 }
 
 .table tbody td span {
