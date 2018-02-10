@@ -2768,6 +2768,11 @@ button.toggle-button::before,
 .resultsDetailIntermediatePhases .loop-block { /* ul */
     margin-right: 16px;
 }
+@media screen and (min-width:640px) {
+    .resultsDetailIntermediatePhases ul.loop-block { /* ul */
+        min-width: 130px;
+    }
+}
 .resultsDetailIntermediatePhases .loop-block li { /* ul li */
    padding-bottom: 0;
 }
@@ -2776,7 +2781,7 @@ button.toggle-button::before,
     color: #555;
 }
 .resultsDetailIntermediatePhases .loop-block .intermediate { /* link container */
-    width: 33.33%;
+    width: 25%;
     margin: 0;
 }
 .resultsDetailIntermediatePhases .loop-block .intermediate span { /* link text container */
