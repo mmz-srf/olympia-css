@@ -374,6 +374,9 @@ table tbody tr th { /* "untertitel" */
     .table tbody tr td.medal.medal-header {
         padding-left: 0;
     }
+    .table tbody tr td.medal:not(.medal-header) {
+        width: 15%;
+    }
 }
 
 .tablecell.sortable .format-local,
