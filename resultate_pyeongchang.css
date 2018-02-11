@@ -2725,6 +2725,11 @@ button.toggle-button::before,
 /* end course data */
 
 /* zwischenwertung */
+.resultsDetailIntermediatePhases {
+    padding-left: 0;
+    margin-bottom: 12px; /* let's hope this doesn't "explode" anywhere */
+    white-space: inherit;
+}
 .resultsDetailIntermediatePhases h5 {
     font: 15px/21px "SRG_SSR_Medium", Arial, Helvetica, Verdana, sans-serif;
     color: #555;
@@ -2736,10 +2741,7 @@ button.toggle-button::before,
     border-bottom: 1px solid #969696;
     font-weight: 400;
 }
-.resultsDetailIntermediatePhases {
-    padding-left: 0;
-    margin-bottom: 12px; /* let's hope this doesn't "explode" anywhere */
-}
+
 .resultsDetailIntermediatePhases ul:not(.loop-block),
 .resultsDetailIntermediatePhases .intermediate-container {
     margin-top: 8px;
@@ -2802,7 +2804,6 @@ button.toggle-button::before,
 @media screen and (max-width:639px) {
     .resultsDetailIntermediatePhases {
         margin-bottom: 8px;
-        white-space: inherit;
     }
     .resultsDetailIntermediatePhases .loop-block {
         margin-bottom: 8px;
