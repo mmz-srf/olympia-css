@@ -522,6 +522,7 @@ button.toggle-button:hover {
     color: #555;
     font-weight: 400;
     margin: 16px 0 8px;
+    margin: 8px 0;
 }
 
 .medal-table-expanded-view .expansion-data .sport-wrapper,
@@ -534,18 +535,19 @@ button.toggle-button:hover {
 .medal-table-expanded-view .expansion-data .sport-wrapper .medallists {
     margin-bottom: 0;
 }
+
+.medal-table-expanded-view .expansion-data .sport-wrapper .medallists .medallist {
+    margin: 8px 0;
+}
 @media screen and (max-width:639px) {
     .medal-table-expanded-view .expansion-data .sport-wrapper .medallists {
-        margin-bottom: 8px;
+        margin: 8px 0 8px 17px;
     }
     .medal-table-expanded-view .expansion-data .sport-wrapper:not(:first-of-type) .medallist-sport-name {
         margin-top: 8px;
     }
 }
 
-.medal-table-expanded-view .expansion-data .sport-wrapper .medallists .medallist {
-    margin-bottom: 0;
-}
 .medal-table-expanded-view .expansion-data .sport-wrapper .medallists .medal-header {
     margin-bottom: 8px;
 }
