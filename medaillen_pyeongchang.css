@@ -541,6 +541,9 @@ button.toggle-button:hover {
 }
 @media screen and (max-width:639px) {
     .medal-table-expanded-view .expansion-data .sport-wrapper .medallists {
+        margin-bottom: 8px;
+    }
+    .medal-table-expanded-view .expansion-data .sport-wrapper .medallists .medallist {
         margin: 8px 0 8px 17px;
     }
     .medal-table-expanded-view .expansion-data .sport-wrapper:not(:first-of-type) .medallist-sport-name {
