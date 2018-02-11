@@ -3789,7 +3789,14 @@ table tbody tr th { /* "untertitel" */
 
 .panel-body.widget-result-detail-mainlist-view .secondaryInfoHeader.resultPhaseColumn {
     padding: 0;
-    margin: 8px 0 2px;
+    /* margin: 8px 0 2px; */
+}
+.panel-body.widget-result-detail-mainlist-view .resultPhaseColumn .secondaryInfoHeaderText {
+    margin-right: 0;
+    padding-right: 8px;
+}
+.panel-body.widget-result-detail-mainlist-view .resultPhaseColumn .secondaryInfoHeaderText .format-local {
+    padding-right: 0;
 }
 .panel-body.widget-result-detail-mainlist-view .table tbody tr.secondaryInfoTableRow td {
     padding-bottom: 3px;
